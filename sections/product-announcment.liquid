@@ -1,0 +1,72 @@
+<style>
+    .Product-Anncoument{
+        background: linear-gradient(240.88deg, #F7717D 17.89%, rgba(247, 113, 125, 0.5) 82.11%);
+        width: 100%;
+        display: grid;
+        place-content: space-around;
+        padding: 10px 0;
+    }
+    .Product-A-p{
+        width: fit-content;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        color: #FFFFFF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;    
+    }
+    .Product-A-p img{
+        width: 13.19px;
+    }
+</style>
+<div class="Product-Anncoument">
+    {%- for block in section.blocks -%}
+        <p class="Product-A-p {{ forloop.index }}"><img src="{{ 'vector-4.svg' | asset_url }}" alt="venter-4" /> {{ block.settings.p-A-one }}</p>
+    {%- endfor -%}
+</div>
+<script>
+    let productAloop = document.querySelectorAll('.Product-A-p');
+    if(productAloop.length == 3){
+        document.getElementsByClassName('Product-Anncoument')[0].style.gridTemplateColumns = 'auto auto auto'
+    }else if(productAloop.length == 2){
+        document.getElementsByClassName('Product-Anncoument')[0].style.gridTemplateColumns = 'auto auto'
+    }else if(productAloop.length == 1){
+        document.getElementsByClassName('Product-Anncoument')[0].style.gridTemplateColumns = 'auto'
+    }
+</script>
+{% schema %}
+    {
+        "name": "Product Announcment",
+        "settings": [
+        ],
+        "max_blocks": 5,
+        "blocks": [
+            {
+                "type": "Annoucment",
+                "name": "Annoucment",
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "p-A-one",
+                        "placeholder": "Annoucment",
+                        "default": "fabriqué en france",
+                        "label": "Annoucment"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "Product Announcment",
+                "category": "ADVANCED LAYOUT"
+            }
+        ]
+    }
+{% endschema %}
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

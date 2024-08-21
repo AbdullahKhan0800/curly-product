@@ -1,0 +1,378 @@
+<style>
+.main-C-C{
+    background: #F5F5F5;
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+.main-C-C p{
+    padding-bottom: 30px;
+    text-align: center;
+    font-weight: 500;
+}
+.main-C-C h2{
+    font-weight: 700;
+    font-size: 40px;
+    color: #131315;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.main-C-lC{
+    width: min(1000px,90%);
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2,300px);
+    place-content: center;
+    gap: 100px;
+}
+.left-before-Clix-CC img{
+    filter: drop-shadow(5px 5px 20px rgba(247, 113, 125, 0.25));
+    border-radius: 19px;
+}
+.right-after-Clix-CC img{
+    filter: drop-shadow(5px 5px 20px rgba(64, 201, 102, 0.25));
+    border-radius: 19px;
+}
+.left-before-Clix-CC{
+    background: rgba(247, 113, 125, 0.1);
+    border-radius: 25px;
+    position: relative;
+
+}
+.right-after-Clix-CC{
+    background: rgba(64, 201, 102, 0.1);
+    border-radius: 25px;
+    position: relative;
+}
+.C-A-m-before{
+    background: linear-gradient(204.28deg, rgba(247, 113, 125, 0.35) 25.31%, rgba(247, 113, 125, 0.15) 89.26%);
+    border: 3px solid #F5F5F5;
+    backdrop-filter: blur(5px);
+    border-radius: 19px 0px;
+    padding: 4px 31px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    font-weight: bold;
+}
+.C-A-m-after{
+    background: linear-gradient(204.28deg, rgba(64, 201, 102, 0.35) 25.31%, rgba(64, 201, 102, 0.15) 89.26%);
+    border: 3px solid #F5F5F5;
+    backdrop-filter: blur(5px);
+    border-radius: 19px 0px;
+    padding: 4px 31px;
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    top: 0;
+    left: 0;
+}
+.inner-conatiner-left{
+    text-align: right;
+
+}
+.left-before-Clix-CC-css .inner-conatiner-left ul li{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin: 0 0 4px;
+    padding: 0;
+    font-weight: 500;
+    font-family: 'Outfit';
+    font-size: 15px;
+}
+.left-before-Clix-CC-css .inner-conatiner-left ul li::after{
+    content: url('{{ "cancel.svg" | asset_url }}');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    height: 0;
+    position: relative;
+    top: 7px;
+    left: 7px;
+}
+.left-before-Clix-CC-css .inner-conatiner-right ul li{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: 0 0 4px;
+    padding: 0;
+    font-weight: 500;
+    font-size: 15px;
+    font-family: 'Outfit';
+}
+.left-before-Clix-CC-css .inner-conatiner-right ul li::before{
+    content: url('{{ "check-mark.svg" | asset_url }}');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    height: 0;
+    position: relative;
+    top: 7px;
+    left: 2px;
+}
+.inner-conatiner-right{
+    text-align: left;
+}
+.inner-conatiner-clixss h4{
+    font-size: 21px;
+    height: 76px;
+    /* text-align: center; */
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+}
+.inner-conatiner-clixss{
+    padding: 5px 10px 15px;
+}
+.inner-conatiner-clixss ul{
+    gap: 8px;
+    display: grid;
+}
+
+@media screen and (min-width:1600px){
+    .main-C-lC{
+        width: min(890px,90%);
+    }
+    .main-C-C h2{
+        font-size: 62px !important;
+        line-height: 85px;
+    }
+    .main-C-C p{
+        font-size: 26px;
+        line-height: 36px;
+    }
+    .left-before-Clix-CC img{
+        width: 100%;
+    }
+    .right-after-Clix-CC img{
+        width: 100%;
+    }
+    .C-A-m-after{
+        font-size: 30px;
+        line-height: 35px;
+        width: 180px;
+        height: 54px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .C-A-m-before{
+        font-size: 30px;
+        line-height: 35px;
+        width: 180px;
+        height: 54px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .main-C-lC{
+        grid-template-columns: 1fr 1fr;
+    }
+    .inner-conatiner-clixss h4{
+        font-size: 30px !important;
+        line-height: 38px;
+    }
+    .inner-conatiner-right ul li{
+        font-size: 20px !important;
+        line-height: 42px;
+    }
+    .inner-conatiner-left ul li{
+        font-size: 20px !important;
+        line-height: 42px;
+    }
+    .inner-conatiner-clixss{
+        padding-top: 25px !important;
+    }
+    .left-before-Clix-CC-css .inner-conatiner-right ul li::before{
+        top: 11px;
+    }
+    .left-before-Clix-CC-css .inner-conatiner-left ul li::after{
+        top: 11px;
+    }
+}
+@media screen and (max-width:804px){
+    .main-C-lC{
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(2,44%);
+        place-content: space-evenly;
+        width: 100%;
+        gap: 0;
+    }
+    .main-C-C p{
+        width: 90%;
+        margin: auto;
+    }
+    .main-C-C h2{
+        width: 90%;
+        margin: auto;
+    }
+}
+@media screen and (max-width:630px){
+    .main-C-C h2{
+        font-size: 31px;
+    }
+    .inner-conatiner-clixss h4{
+        text-align: revert;
+        font-size: 17px;
+        line-height: 1.1;
+    }
+    .inner-conatiner-clixss {
+        padding: 5px 5px 15px;
+    }
+    .inner-conatiner-clixss li{
+        font-size:13px !important ;
+    }
+}
+</style>
+<div class="main-C-C">
+    <h2>{{ section.settings.headig-text }}</h2>
+    <p>{{ section.settings.semi-heading }}</p>
+    <div class="main-C-lC left-before-Clix-CC-css" >
+        {%- for block in section.blocks -%}
+        {%- case block.type -%}
+        {%- when 'Before' -%}
+        <div class="left-before-Clix-CC left-before-Clix-CC-css">
+            <img src="{{ block.settings.Image-forpich-before | img_url: 'master' }}" alt="before">
+            <div class="inner-conatiner-left inner-conatiner-clixss">
+            <h4>
+                {{ block.settings.hading-text-before }}
+            </h4>
+            <ul>
+                {%- for block in section.blocks -%}
+                    {%- case block.type -%}        
+                    {%- when 'Before-Li' -%}
+                    <li>{{ block.settings.list }}</li>
+                    {%- endcase -%}    
+                {%- endfor -%}
+            </ul>
+            <span class="C-A-m-before">{{ block.settings.top-heading-before }}</span>
+            </div>
+        </div>
+        {%- when 'After' -%}
+        <div class="right-after-Clix-CC">
+            <img src="{{ block.settings.Image-forpich-after | img_url: 'master' }}" alt="after">
+            <div class="inner-conatiner-right inner-conatiner-clixss">
+            <h4>
+               {{ block.settings.hading-text }}
+            </h4>
+            <ul>
+                {%- for block in section.blocks -%}
+                {%- case block.type -%}        
+                {%- when 'After-Li' -%}
+                <li>{{ block.settings.list-p }}</li>
+                {%- endcase -%}    
+                {%- endfor -%}
+            </ul>
+            <span class="C-A-m-after">{{ block.settings.top-heading-after }}</span>
+            </div>
+        </div>
+        {%- endcase -%}
+        {%- endfor -%}
+    </div>
+</div>
+{% schema %}
+{
+"name": "Comparison Clix",
+"settings": [
+    {
+      "type": "text",
+      "id": "headig-text",
+      "label": "Heading Text",
+      "default": "Pas besoin de nous croire sur parole..."
+    },
+    {
+      "type": "text",
+      "id": "semi-heading",
+      "label": "Semi Heading",
+      "default": "\"J'utilise le Beauty Boost depuis 4 mois et rien à dire, vraiment des résultats bluffants\" - Julia | Cliente Curaly"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "Before",
+      "name": "Before",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "Image-forpich-before",
+          "label":"Image Here"
+        },
+        {
+            "type": "text",
+          "id": "hading-text-before",
+          "label": "Heading Text",
+          "default": "Problèmes de cheveux, ongles et peau"
+        },
+        {
+          "type": "text",
+          "id": "top-heading-before",
+          "label": "Top Text",
+          "default": "Avant"
+        }
+      ]
+    },
+    {
+      "type": "After",
+      "name": "After",
+      "settings": [
+        {
+            "type": "image_picker",
+            "id": "Image-forpich-after",
+            "label":"Image Here"
+        },
+        {
+          "type": "text",
+          "id": "hading-text",
+          "label": "Heading Text-after",
+          "default": "Problèmes de cheveux, ongles et peau"
+        },
+        {
+          "type": "text",
+          "id": "top-heading-after",
+          "label": "Top Text",
+          "default": "Avant"
+        }
+      ]
+    },
+    {
+      "type": "Before-Li",
+      "name": "Before List",
+      "settings": [
+        {
+          "type": "text",
+          "id": "list",
+          "label": "B-List",
+          "default": "Perte de cheveux"
+        }
+      ]
+    },
+    {
+      "type": "After-Li",
+      "name": "After-Li",
+      "settings": [
+        {
+          "type": "text",
+          "id": "list-p",
+          "label": "B-List-before ",
+          "default": "Perte de cheveux"
+        }
+      ]
+    }
+  ],
+"presets": [
+{
+"name": "Comparison Clix",
+"category": "ADVANCED LAYOUT"
+}
+]
+}
+{% endschema %}
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

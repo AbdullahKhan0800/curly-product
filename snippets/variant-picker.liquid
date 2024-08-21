@@ -1,0 +1,320 @@
+{%- comment -%}
+  ----------------------------------------------------------------------------------------------------------------------
+  VARIANT PICKER
+  ----------------------------------------------------------------------------------------------------------------------
+
+  Render the variant picker option selectors.
+
+  ********************************************
+  Supported variables
+  ********************************************
+
+  * product: the product for which to render the selector (required)
+  * update_url: if set to true, the URL is updated when the variant changes (usually used for product page)
+  * hide_sold_out_variants: if set to true, the sold out or unavailable variants are hidden
+  * hide_size_chart: if set to true, size chart is always hidden
+  * force_dropdown_as_block: if set to true, the dropdown selectors are replaced by blocks, which is useful for quick buy where dropdown are not convenient to use
+  * form_id: the ID of the form that is listening
+  * block: the block itself, for theme-specific options (such as selector types)
+{%- endcomment -%}
+
+{%- assign color_label_list = 'general.label.color' | t | replace: ', ', ',' | downcase | split: ',' -%}
+{%- assign size_label_list = 'general.label.size' | t | replace: ', ', ',' | downcase | split: ',' -%}
+{%- unless product.has_only_default_variant or hide_sold_out_variants and product.available == false -%}
+  <variant-picker class="variant-picker" handle="{{ product.handle }}" form="{{ form_id }}" {% if update_url %}update-url{% endif %} {% if hide_sold_out_variants %}hide-sold-out-variants{% endif %}>
+    {%- for option in product.options_with_values -%}
+      {%- assign option_downcase = option.name | downcase -%}
+      {%- assign selector_type = block.settings.selector_mode -%}
+
+      {% if color_label_list contains option_downcase %}
+        {%- assign selector_type = block.settings.color_mode -%}
+
+        {%- if selector_type == 'variant_image' -%}
+          {%- comment -%}To use this mode every variant must have an attached media{%- endcomment -%}
+
+          {%- for variant in product.variants -%}
+            {%- unless variant.featured_media -%}
+              {%- assign selector_type = 'color' -%}
+              {%- break -%}
+            {%- endunless -%}
+          {%- endfor -%}
+        {%- endif -%}
+      {%- endif -%}
+
+      {%- if selector_type == 'dropdown' and force_dropdown_as_block -%}
+        {%- assign selector_type = 'block' -%}
+      {%- endif -%}
+
+      <fieldset class="variant-picker__option no-js:hidden">
+        <div class="variant-picker__option-info">
+          <div class="h-stack gap-2">
+            <legend class="text-subdued">{{ option.name }}:</legend>
+            <variant-option-value form="{{ form_id }}" for="option{{ option.position }}">{{ option.selected_value }}</variant-option-value>
+          </div>
+
+          {%- if hide_size_chart != true and block.settings.size_chart_page != blank and size_label_list contains option_downcase -%}
+            {%- capture drawer_id -%}size-chart-{{ section.id }}-{{ block.id }}{%- endcapture -%}
+
+            <button type="button" class="text-sm text-subdued" aria-controls="{{ drawer_id | escape }}" aria-expanded="false">
+              <span class="link">{{ 'product.general.size_chart' | t }}</span>
+            </button>
+
+            <x-drawer id="{{ drawer_id }}" class="drawer drawer--lg">
+              <span class="h5" slot="header">{{ block.settings.size_chart_page.title }}</span>
+
+              <div class="prose">
+                {{- block.settings.size_chart_page.content -}}
+              </div>
+            </x-drawer>
+          {%- endif -%}
+        </div>
+
+        {%- if selector_type == 'dropdown' -%}
+          {%- capture popover_id -%}popover-{{ 'now' | date: '%N' }}{%- endcapture -%}
+
+          <div class="relative">
+            <button type="button" class="select" aria-controls="{{ popover_id }}" aria-expanded="false">
+              <span id="{{ popover_id }}-selected-value">{{- option.selected_value -}}</span>
+              {%- render 'icon' with 'chevron-bottom', class: 'select-chevron' -%}
+            </button>
+
+            <x-popover id="{{ popover_id }}" class="popover" initial-focus="[aria-selected='true']" close-on-listbox-select anchor-horizontal="start" anchor-vertical="end">
+              <p class="h5" slot="title">{{ option.name }}</p>
+
+              <x-listbox data-option-selector class="popover-listbox" aria-owns="{{ popover_id }}-selected-value">
+                <input type="hidden" name="option{{ option.position }}" form="{{ form_id }}" value="{{ option.selected_value | escape }}">
+
+                {%- for value in option.values -%}
+                  <button type="button" class="popover-listbox__option" role="option" value="{{ value | escape }}" {% if value == option.selected_value %}aria-selected="true"{% endif %} data-option-value>{{ value }}</button>
+                {%- endfor -%}
+              </x-listbox>
+            </x-popover>
+          </div>
+        {%- else -%}
+          <div {% unless block.settings.stack_blocks %}class="scroll-area bleed sm:unbleed"{% endunless %}>
+            <div data-option-selector class="variant-picker__option-values {% if block.settings.stack_blocks %}wrap{% else %}scroll-area bleed sm:unbleed{% endif %} {% if selector_type == 'color' and settings.color_swatch_style == 'rectangle' %}variant-picker__option-values--color gap-4{% else %}gap-2{% endif %}">
+              {%- assign name = 'option' | append: option.position -%}
+
+              {%- for value in option.values -%}
+                {%- assign selected = false -%}
+
+                {%- if value == option.selected_value -%}
+                  {%- assign selected = true -%}
+                {%- endif -%}
+
+                {%- case selector_type -%}
+                  {%- when 'variant' -%}
+                    {%- assign variant_for_value = product.variants | where: name, value | first -%}
+                    {%- render 'swatch' with 'media', value: value, media: variant_for_value.featured_media, selected: selected, name: name, form: form_id, bordered: true -%}
+                  {%- when 'color' -%}
+                    {%- render 'swatch' with 'color', value: value, selected: selected, name: name, form: form_id -%}
+                  {%- when 'block' -%}
+                    {%- render 'swatch' with 'block', value: value, selected: selected, name: name, form: form_id -%}
+                  {%- when 'block_swatch' -%}
+                    {%- render 'swatch' with 'block', value: value, selected: selected, name: name, form: form_id, show_color: true -%}
+                {%- endcase -%}
+              {%- endfor -%}
+            </div>
+          </div>
+        {%- endif -%}
+      </fieldset>
+    {%- endfor -%}
+
+    <noscript>
+      {%- capture input_label -%}
+        {{ 'product.general.variant' | t }}{%- endcapture -%}
+      {%- capture select_options -%}
+        {%- for variant in product.variants -%}
+          <option {% if variant == product.selected_or_first_available_variant %}selected="selected"{% endif %} {% unless variant.available %}disabled="disabled"{% endunless %} value="{{ variant.id }}">{{ variant.title }} - {{ variant.price | money }}</option>
+        {%- endfor -%}
+      {%- endcapture -%}
+
+      {%- render 'select', label: input_label, form: form_id, name: 'id', options: select_options -%}
+    </noscript>
+  </variant-picker>
+{%- else -%}
+  <noscript>
+    <input type="hidden" name="id" form="{{ form_id }}" value="{{ product.selected_or_first_available_variant.id }}">
+  </noscript>
+{%- endunless -%}
+<style>
+  .percentage_price {
+    font-size: 14px;
+    line-height: 18px;
+    background: linear-gradient(180deg, #F7717D 8.62%, #FBB8BE 88.06%);
+    border-radius: 10px;
+    color: #FFFFFF;
+    font-weight: 700;
+    padding: 2px 6px;
+    position: absolute;
+    top: -10px;
+  }
+  .block-swatch {
+    display: grid;
+    height: fit-content;
+    width: 200px;
+    height: 121px;
+    border-radius: 25px;
+    gap: 3px;
+    place-content: center;
+    background: #FFFFFF;
+    border: 4px solid #F5F5F5;
+    border-radius: 25px;
+    position: relative;
+  }
+  .p-price {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .negativePrice {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+
+    color: #AEAEAE;
+  }
+  .price_V {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    color: #131315;
+  }
+  .compare-Price {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-decoration-line: line-through;
+    color: #F7717D;
+  }
+  .beforeValue {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 35px;
+    color: #131315;
+  }
+  .sale-Tag {
+    width: 100%;
+    position: absolute;
+    background: #131315;
+    border-radius: 25px 25px 0 0;
+    top: -35px;
+    text-align: center;
+    z-index: -2;
+    padding-bottom: 30px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.105em;
+    padding-top: 7px;
+    color: #FFFFFF;
+  }
+  .variant-picker__option-values {
+    margin-top: 45px;
+    gap: 50px;
+  }
+  @media screen and (max-width:1544px) {
+    .variant-picker__option-values {
+      gap: 30px;
+    }
+    .block-swatch {
+      width: 177px;
+      height: 100px;
+    }
+  }
+  @media screen and (max-width:1355px) {
+    .variant-picker__option-values {
+      gap: 10px;
+    }
+  }
+  @media screen and (max-width:1251px) {
+    .variant-picker__option-values {
+      gap: 0;
+      display: flex;
+      justify-content: space-evenly;
+    }
+    .block-swatch {
+      width: 163px;
+    }
+  }
+  @media screen and (max-width:566px) {
+    .block-swatch {
+      width: 115px;
+    }
+    .sale-Tag {
+      top: -31px;
+    }
+    .beforeValue {
+      font-size: 10.4336px;
+      line-height: 20px;
+    }
+    .p-price {
+      font-size: 15px;
+      line-height: 19px;
+    }
+    .percentage_price {
+      font-size: 8.5px;
+      line-height: 11px;
+    }
+    .sale-Tag {
+      font-size: 6.95576px;
+      line-height: 9px;
+      letter-spacing: 0.105em;
+    }
+    .compare-Price {
+      font-size: 12px;
+      line-height: 15px;
+    }
+    .negativePrice {
+      font-size: 8.5px;
+      line-height: 11px;
+    }
+    .price_V {
+      font-size: 15px;
+    }
+
+  }
+  @media screen and (max-width:400px) {
+    .variant-picker__option-values {
+      justify-content: space-between;
+      position: relative;
+      width: 107%;
+      left: -14px;
+    }
+  }
+</style>
+<script>
+  let productA = {{ product | json }}
+  console.log(productA)
+  let getV = document.querySelectorAll('.block-swatch')
+  let beforeValue = document.querySelectorAll('.beforeValue')
+  let PPrice = document.querySelectorAll('.p-price')
+  for (let i = 0; i < getV.length; i++) {
+    PPrice[i].innerHTML = `<span class="price_V">€${
+      productA.variants[i].price / 100
+    }</span>`
+    if (productA.variants[i].compare_at_price) {
+      PPrice[i].insertAdjacentHTML('beforeend', `<span class="compare-Price">€${
+        productA.variants[i].compare_at_price / 100
+      }</span>`)
+      PPrice[i].insertAdjacentHTML(
+        'afterend',
+        `<span class="negativePrice">${ -((productA.variants[i].price - productA.variants[i].compare_at_price) / 100)
+        } €d’économies</span>`
+      )
+      beforeValue[i].insertAdjacentHTML(
+        'beforebegin',
+        `<span class="percentage_price">rabais ${ -(parseInt(((productA.variants[i].price / productA.variants[i].compare_at_price) * 100) - 100))
+        }%</span>`
+      )
+    }
+  }
+  beforeValue[1].insertAdjacentHTML('beforebegin', `<span class="sale-Tag">BEST SELLER</span>`)
+  beforeValue[2].insertAdjacentHTML('beforebegin', `<span class="sale-Tag">MEILLEURE AFFAIRE</span>`)
+</script>

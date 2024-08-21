@@ -1,0 +1,317 @@
+<style>
+    .main-TCR{
+        display: flex;
+        justify-self: center;
+        margin: auto;
+        width: min(1000px,90%);
+        margin-top: 50px;
+        gap: 50px;
+    }
+    .main-TCR h2 span:first-child{
+        background:-webkit-linear-gradient(82deg, #F7717D 17.89%, rgba(247, 113, 125, 0.5) 82.11%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .main-TCR h2 span:last-child{
+        background: -webkit-linear-gradient(48deg, #F7717D 17.89%, rgba(247, 113, 125, 0.5) 82.11%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .w-TRC{
+        width: 45%;
+    }
+    .w-TRC h2{
+        font-size:41px;
+        font-weight: bold;
+        line-height: 1;
+        margin-bottom: 15px;
+    }
+    .test-revewi{
+        background-color: #F5F5F5;
+        padding: 20px;
+        display: grid;
+        gap: 10px;
+        grid-template-columns:20% 80%;
+        border-radius: 25px;
+    }
+    .e-TRC ul li::before{
+        content: url('https://cdn.shopify.com/s/files/1/0831/6459/4490/files/Vector_f3029832-62d0-4432-af91-8d006ab02160.png?v=1714520029');
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        height: 0;
+        position: relative;
+        top: 7px;
+    }
+    .e-TRC ul li{
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        margin: 0 0 4px;
+        padding: 0;
+        font-weight: 500;
+        font-family: 'Outfit';
+    }
+    .image-review-clx{  
+        display: flex;
+        justify-content: left;
+        gap: 15px;
+        align-items: center;
+    }
+    .image-review-clx img{  
+        width: 100px;
+    }
+    .review-clixx{
+        display: grid;
+        gap: 3px;
+    }
+    .e-TRC ul {
+        display: grid;
+        gap: 16px;  
+    }
+    .e-TRC h4 {
+        font-weight: 700;
+    }
+    .e-TRC {
+        width: 50%;
+        display: flex;
+        gap: 26px;
+        align-items: baseline;
+        flex-direction: column;
+        justify-content: start;
+    }
+    .ancher-clix{
+        background: linear-gradient(206.8deg, #71F79F 3.05%, #40C966 3.06%, rgba(64, 201, 102, 0.5) 89.07%);
+        border: 4px solid #F5F5F5;
+        box-shadow: 5px 5px 10px rgba(64, 201, 102, 0.25);
+        backdrop-filter: blur(2px);
+        border-radius: 25px;
+        padding: 12px 29px;
+        font-weight: 700;
+        color: white;
+    }
+    .main-acherimage-clix img{
+        width: 100px;
+    }
+    .main-acherimage-clix p{
+        font-size: 13px;
+    }
+    .main-acherimage-clix{
+        display: flex;
+        gap: 15px;
+        align-items: center;
+    }
+    .main-none-res{
+        display: none;
+    }
+    @media screen and (min-width:1600px) {
+        .main-TCR{
+            width: min(1530px,90%);
+        }
+        .w-TRC h2{
+            font-size: 62px;
+            line-height: 65px;
+        }
+        .e-TRC h4{
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 38px;
+        }
+        .e-TRC ul li{
+            font-size: 26px;
+            line-height: 60px;
+        }
+        .ancher-clix{
+            font-size: 28px;
+            line-height: 35px;
+        }
+        .main-acherimage-clix p{
+            font-size: 16px;
+            line-height: 35px;
+        }
+        .main-acherimage-clix img{
+            width: 130px !important;
+        }
+        .image-review-clx img{
+            width: 130px !important;
+        }
+        .review-clixx h5{
+            font-size: 26px;
+            line-height: 35px;
+        }
+        .review-clixx p{
+            font-size: 20px;
+            line-height: 35px;
+        }
+        .main-TCR{
+            margin-top: 80px !important;
+        }
+        .e-TRC ul li::before{
+            top: 15px !important;
+        }
+    }
+    @media screen and (max-width:873px) {
+        .main-TCR{
+            flex-direction: column-reverse;
+        }
+        .main-none-res{
+            display: block;
+            font-size:41px;
+            font-weight: bold;
+            line-height: 1;
+            margin-bottom: 15px;
+        }
+        .w-TRC h2{
+            display: none !important;
+        }
+        .e-TRC {
+            width: 100%;
+        }
+        .w-TRC{
+            width: 100%;
+        }
+    }
+    @media screen and (max-width:500px) {
+        .main-none-res{
+            margin-bottom: 0;
+            font-size: 34px;
+        }
+    }
+    @media screen and (max-width:449px) {
+        .main-none-res{
+            font-size: 25px;
+        }
+        .main-acherimage-clix{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+        }
+        .re_p_o_i{
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .e-TRC ul{
+            gap: 10px;
+        }
+        .e-TRC{
+            gap: 12px;
+        }
+        .main-TCR{
+            gap:20px;
+        }
+    }
+</style>
+<div class="main-TCR">
+    <div class="w-TRC">
+        <h2>{{ section.settings.heading-test }}</h2>
+        <div class="test-revewi">
+            <img src="{{ section.settings.imgae-reviwe | img_url: 'master' }}" alt="test-image" >
+            <div class="review-clixx">
+                <div class="image-review-clx">
+                    <img src="https://cdn.shopify.com/s/files/1/0510/6846/9429/files/5-star.png?v=1669353033" alt="stars" />
+                    <p>Évalué <b>4.9/5</b></p>
+                </div>
+                <h5 style="font-weight:600;">{{ section.settings.headingreview }}</h5>
+                <p>{{ section.settings.reviwetestarea }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="e-TRC">
+        <h2 class="main-none-res">{{ section.settings.heading-test }}</h2>
+        <h4>{{ section.settings.heading-ul }}</h4>
+        <ul >
+            {%- for block in section.blocks -%}
+            <li>{{ block.settings.lisetreasdf }}</li>
+            {%- endfor -%}
+        </ul>
+        <div class="main-acherimage-clix">
+            <a class="ancher-clix" href="{{ section.settings.isjfskfj }}">{{ section.settings.lstaach }}</a>
+            <div class="re_p_o_i">
+               <img src="https://cdn.shopify.com/s/files/1/0510/6846/9429/files/5-star.png?v=1669353033" alt="stars" />
+                <p>Évalué <b>4,9/5</b> sur <b>227+</b> avis vérifiés</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% schema %}
+{
+"name": "Testimonial Reviews",
+"max_blocks": 5,
+"settings": [
+     {
+        "type": "html",
+        "id": "heading-test",
+        "placeholder": "Heading Text",
+        "default": "Pourquoi <span>des milliers</span> de personnes commencent leur journée avec les <span>Gummies Beauty Boost</span>",
+        "label": "Heading Text",
+        "info": "Plese use '<span>[Text]</span>' for the color Text "
+    },
+    {
+        "type":"header",
+        "content":"Review Content"
+    },
+    {
+      "type": "image_picker",
+      "id": "imgae-reviwe",
+        "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "headingreview",
+      "label": "Heading Name",
+      "default": "Curaly sommeil"
+    },
+    {
+      "type": "textarea",
+      "id": "reviwetestarea",
+      "label": "Review Description",
+      "default": "“Cela fait 1 semaine que je les prend , j'ai commander une cure de 3 mois et je ressent déjà les effets. Je suis plus légère, moins de ballonnements, je me sent bien et en forme. Mon ventre a déjà degonflé.”"
+    },
+    {
+      "type": "text",
+      "id": "heading-ul",
+      "label": "List Heading",
+      "default": "Les gummies Beauty Boost sont parfaits pour vous si..."
+    },
+    {
+      "type": "text",
+      "id": "lstaach",
+      "label": "Button Text",
+      "default": "acheter maintenant"
+    },
+    {
+      "type": "url",
+      "id": "isjfskfj",
+      "label": "Button URL"
+    }
+],
+ "blocks": [
+    {
+      "type": "text",
+      "name": "List Features",
+      "settings": [
+         {
+          "type": "text",
+          "id": "lisetreasdf",
+          "label": "List Feature",
+          "default": "vous désirez mettre un terme à la chute de cheveux"
+        }
+      ]
+    }
+  ],
+"presets": [
+{
+"name": "Testimonial Reviews",
+"category": "ADVANCED LAYOUT"
+}
+]
+}
+{% endschema %}
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

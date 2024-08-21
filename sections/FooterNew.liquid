@@ -1,0 +1,341 @@
+<style>
+    .mainNewFooter{
+        background: #FAF1DB;
+        border: 4px solid #F5F5F5;
+        box-shadow: 5px 5px 15px rgba(255, 226, 157, 0.25);
+        /* Note: backdrop-filter has minimal browser support */
+        border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: min(1800px,92%);
+        margin: 130px auto 20px;
+        padding-bottom:15px;
+    }
+    .innerNewfooter{
+        display: grid;
+        place-content: center;
+        padding: 35px 30px;
+        grid-template-columns: 30% 440px 30%;
+    }
+    .lastFF{    
+        font-weight: 400;
+        /* identical to box height, or 250% */
+        text-align: center;
+        color: #D1BC88;
+        font-size: 13px;
+        text-align: center;
+    }
+    .innerNewfooter h3{    
+        font-weight: 500;
+        margin-bottom: 24px;
+        color: #131315;
+        font-size: 22px;
+    }
+    .footerlastparagraph{    
+        font-weight: 400;
+        font-size: 13px;
+        color: #D1BC88;
+        margin-top: 15px;
+    }
+    .inenrfofo ul{
+        gap: 6px;
+        display: grid;
+    }
+    .inenrfofo{
+        display: grid;
+        grid-template-columns: auto auto;
+        place-content: space-around;
+        align-items: flex-start;
+        height: fit-content;
+    }
+    .centerFoo{
+        position: relative;
+        padding-top: 45px;
+    }
+    .centerFoo h4{    
+        font-weight: 500;
+        font-size:27px ;
+        /* identical to box height, or 118% */
+
+        text-align: center;
+
+        color: #131315;
+    }
+    .centerFoo h5{    
+        font-weight: 500;        
+        /* identical to box height, or 173% */
+
+        text-align: center;
+
+        color: #131315;
+    }
+    .inenrfofo li{    
+        font-weight: 500;
+        align-items: center;
+        display: flex;
+        gap: 20px;
+        /* identical to box height, or 173% */
+
+
+        color: #131315;
+    }
+    .logoFooterer{
+        background: url("https://cdn.shopify.com/s/files/1/0831/6459/4490/files/Vector_13.svg?v=1714520963");
+        display: flex;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 181px auto;
+        justify-content: center;
+        width: 100%;
+        height: 131px;
+        align-items: center;
+        margin: auto;
+        position: absolute;
+        top: -109px;
+    }
+    .logoFooterer img {
+        position: relative;
+        top: 17px;
+        width: 100px;
+    }
+    .footernewnewsletter{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+    .thisislastone{
+        outline: none;
+        border: none;
+        border-bottom: 1px solid #D1BC88;
+        border-radius: 0;
+        width: fit-content;
+        height: fit-content !important;
+        padding: 0 !important;
+        color: #D1BC88;
+    }
+    .thisislastone:focus{
+        outline: none !important;
+        border: none !important;
+    }
+    .lable-newsletternew{
+        color: #D1BC88;
+        height: fit-content;
+    }
+    .newsletterfooternew{
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 15px;
+    }
+    @media screen and (min-width:1600px){
+        .logoFooterer{
+            height: 206px;
+            background-size: 306px auto;
+        }
+        .logoFooterer img{
+            width: 176px;
+        }
+        .centerFoo h4{
+            font-size: 38px;
+            line-height: 45px;  
+        }
+        .centerFoo h5{
+            font-size: 26px;
+            line-height: 45px;
+        }
+        .inenrfofo li{
+            font-size: 26px;
+            line-height: 45px;
+        }
+        .innerNewfooter h3{
+            font-size: 38px;
+            line-height: 45px;
+        }
+        .footerlastparagraph{
+            font-size: 15px;
+            line-height: 32px;
+        }
+        .lastFF{
+            font-size: 18px;
+            line-height: 45px;
+        }
+        .innerNewfooter{
+            padding:100px 30px 35px;
+            grid-template-columns: 30% 589px 30%;
+        }
+        .centerFoo{
+            padding-top: 75px;
+        }
+        .logoFooterer{
+            top: -188px;
+        } 
+        .inenrfofo{
+            place-content: space-between;
+        }
+    }
+    @media screen and (max-width:1171px){
+        .inenrfofo{
+            grid-template-columns:auto;
+        }
+        .innerNewfooter{
+            grid-template-columns: 30% 40% 30%;
+        }
+        .logoFooterer{
+        } 
+        .inenrfofo{
+            justify-content: inherit;
+        }
+    }
+    @media screen and (max-width:817px){
+        .innerNewfooter{
+            grid-template-columns: auto;
+        }
+        .centerFoo{
+            order: -1;
+            padding-top: 18px;
+        }
+        .inenrfofo{
+            grid-template-columns: auto auto;
+            place-content: space-evenly;
+            margin-top: 21px;
+        }
+        .footerlastparagraph{
+            width: min(500px,90%);
+            margin: 25px auto 0;
+            text-align: center;
+        }
+    }
+    @media screen and (max-width:500px){
+        .centerFoo h4{
+            font-size: 30px;
+            line-height: 38px;
+            margin-top: 30px;
+        }
+        .centerFoo h5{
+            font-size: 20px;
+            line-height: 25px;
+        }
+        .lable-newsletternew{
+            font-weight: 400;
+            font-size: 14px;
+        }
+        .footernewnewsletter{
+            margin-top: 10px;
+        }
+        .inenrfofo{
+            grid-template-columns: auto;
+            place-content: baseline; 
+            margin-top: 21px;
+            gap: 28px;
+        }
+        .innerNewfooter{
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+        .inenrfofo li svg{
+            width: 15px !important;
+        }
+        .inenrfofo li{
+            font-size: 16px;
+            line-height: 20px;
+        }
+        .innerNewfooter h3{
+            margin-bottom: 7px;
+        }
+        .footerlastparagraph{
+            text-align: left;
+            margin: 0;
+            padding-top: 20px;
+        }
+        .mainNewFooter{
+            margin: 69px auto 20px;
+        }
+    }
+
+</style>
+<div class="mainNewFooter">
+    <div class="innerNewfooter">
+        <div class="FFtnew">
+            <div class="inenrfofo"> 
+                <div>
+                    <h3>contact</h3>
+                    <ul>
+                        <li>{%- render 'icon' with 'phone' -%} +33 970 461 212</li>
+                        <li>{%- render 'icon' with 'mail' -%} hello@curaly.fr</li>
+                    </ul>    
+                </div>
+                <div>
+                    <h3>suivez-nous</h3>
+                    <ul>
+                        <li>{%- render 'icon' with 'facebookk' -%}Facebook</li>
+                        <li>{%- render 'icon' with 'insta' -%}Instagram</li>
+                    </ul>    
+                </div>
+            </div>
+            <p class="footerlastparagraph">
+                Les compléments alimentaires doivent être utilisés dans le cadre d'un mode de vie sain et ne pas être utilisés comme substituts d'un régime alimentaire varié et équilibré. Curaly est une marque de compléments alimentaires. Les résultats individuels peuvent varier.
+            </p>
+        </div>
+        <div class="centerFoo">
+            <div class="logoFooterer">
+                <img src="{{ 'logoname.png' | asset_url }}" alt="footerlogo" />
+            </div>
+            <h4>envie d’un cadeau de bienvenue ?</h4>
+            <h5>profitez de 10% de remise en vous abonnant</h5>
+            <div class="footer__block footer__block--newsletter footernewnewsletter" {{ block.shopify_attributes }}>
+                {%- form 'customer', id: 'footer-newsletter', class: 'footer__newsletter-form form' -%}
+                    {%- if form.posted_successfully? -%}
+                    {%- capture success_message -%}{{ 'general.newsletter.subscribed_successfully' | t }}{%- endcapture -%}
+                    {%- render 'banner', content: success_message, status: 'success' -%}
+                    {%- else -%}
+                    {%- if form.errors -%}
+                        {%- capture error_message -%}{{ form.errors.translated_fields['email'] }} {{ form.errors.messages['email'] }}{%- endcapture -%}
+                        {%- render 'banner', content: error_message, status: 'error' -%}
+                    {%- endif -%}
+
+                    <input type="hidden" name="contact[tags]" value="newsletter">
+
+                    {%- capture label -%}{{ 'general.newsletter.email' | t }}{%- endcapture -%}
+                    {%- render 'input', name: 'contact[email]', label: label, type: 'email', required: true, autocomplete: 'email', enterkeyhint: 'send', self_submit: true -%}
+                    {%- endif -%}
+                {%- endform -%}
+            </div>
+        </div>
+        <div class="inenrfofo">
+            <div>
+                <h3>produits</h3>
+                <ul>
+                    <li>beauty boost</li>
+                    <li>slim & detox</li>
+                    <li>sleep well</li>
+                </ul>    
+            </div>
+            <div>
+                <h3>information</h3>
+                <ul>
+                    <li>FAQ</li>
+                    <li>politique de livraison</li>
+                    <li>retours & remboursements</li>
+                    <li>mon compte</li>
+                </ul>    
+            </div>
+        </div>
+    </div>
+    <div class="lastFF">© 2022 Curaly - Tous droits réservés. | Mentions Légales | Politiques de confidentialité | CGV | RGPD</div>
+</div>
+{% schema %}
+{
+"name": "Footer",
+"settings": [
+]
+}
+{% endschema %}
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

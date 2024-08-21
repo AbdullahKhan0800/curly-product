@@ -1,0 +1,164 @@
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.4.1/slick.css"/>
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.4.1/slick-theme.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<style>
+  .main-SCroll {
+    padding: 85px 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: min(1100px, 90%);
+    flex-direction: column;
+  }
+  .main-SCroll p {
+    padding-bottom: 30px;
+    text-align: center;
+    font-weight: 500;
+  }
+  .main-SCroll h2 {
+    font-weight: 700;
+    font-size: 40px;
+    color: #131315;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  .images-ii {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .dot-ii {
+    width: 50px;
+    height: 50px;
+    background-color: #ABE1ED;
+    border-radius: 50%;
+    border: 4px solid black;
+    position: relative;
+  }
+  .innerDivSS p {
+    text-align: left;
+  }
+  .innerDivSS {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .outerdotii {
+    width: 75%;
+    height: 4px;
+    position: relative;
+    top: 52px;
+  }
+  .dot-line {
+    background: linear-gradient(to right, black 57%, rgba(354,255,255,0) 0);
+    background-position: top;
+    background-size: 17px 6px;
+    background-repeat: repeat-x;
+    height: 4px;
+  }
+  .main-imageanimation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  @media screen and (min-width: 832px) {
+    .mobile-images-ii {
+      display: none !important;
+    }
+  }
+  @media screen and (max-width:832px) {
+    .desktop-images-ii {
+      display: none !important;
+    }
+    .outerdotii {
+      display: none !important;
+    }
+    .mobile-images-ii {
+      display: block !important;
+    }
+    .innerDivSS {
+      width: 200px !important;
+      overflow: hidden;
+    }
+  }
+</style>
+
+<div class="main-SCroll reachtwo">
+  <h2>La clé de toute routine beauté est la consistance !</h2>
+  <p>Nos experts santé recommandent de prendre les gummies pendant 3 mois et plus pour obtenir des résultats optimaux.</p>
+  <div class="main-imageanimation">
+    <div class="outerdotii">
+      <div class="dot-line"></div>
+    </div>
+    <div class="desktop-images-ii images-ii">
+      <div class="innerDivSS">
+        <h3>Prenez 2</h3>
+        <div class="dot-ii"></div>
+        <p>Prenez 2 gummies par jour pour ancrer votre délicieuse nouvelle routine beauté."</p>
+      </div>
+      <div class="innerDivSS">
+        <h3>Prenez 2</h3>
+        <div class="dot-ii"></div>
+        <p>Prenez 2 gummies par jour pour ancrer votre délicieuse nouvelle routine beauté."</p>
+      </div>
+      <div class="innerDivSS">
+        <h3>Prenez 2</h3>
+        <div class="dot-ii"></div>
+        <p>Prenez 2 gummies par jour pour ancrer votre délicieuse nouvelle routine beauté."</p>
+      </div>
+      <div class="innerDivSS">
+        <h3>Prenez 2</h3>
+        <div class="dot-ii"></div>
+        <p>Prenez 2 gummies par jour pour ancrer votre délicieuse nouvelle routine beauté."</p>
+      </div>
+    </div>
+    {%- comment -%}
+      start mobile view
+    {%- endcomment -%}
+    <div class="mobile-images-ii images-ii">
+      <div class="innerDivSS">
+        <h3>Prenez 2</h3>
+        <div class="dot-ii"></div>
+        <p>Prenez 2 gummies par jour pour ancrer votre délicieuse nouvelle routine beauté."</p>
+      </div>
+      <div class="innerDivSS">
+        <h3>Prenez 2</h3>
+        <div class="dot-ii"></div>
+        <p>Prenez 2 gummies par jour pour ancrer votre délicieuse nouvelle routine beauté."</p>
+      </div>
+      <div class="innerDivSS">
+        <h3>Prenez 2</h3>
+        <div class="dot-ii"></div>
+        <p>Prenez 2 gummies par jour pour ancrer votre délicieuse nouvelle routine beauté."</p>
+      </div>
+      <div class="innerDivSS">
+        <h3>Prenez 2</h3>
+        <div class="dot-ii"></div>
+        <p>Prenez 2 gummies par jour pour ancrer votre délicieuse nouvelle routine beauté."</p>
+      </div>
+    </div>
+  </div>
+  <a href="#" class="last-acc-M">acheter maintenant</a>
+</div>
+
+<script>
+  $(document).ready(function() {
+    $('.mobile-images-ii').slick();
+  });
+</script>
+
+{% schema %}
+  {
+    "name": "Scroll Animation Section",
+    "settings": [],
+    "presets": [
+      {
+        "name": "Scroll Animation Section",
+        "category": "ADVANCED LAYOUT"
+      }
+    ]
+  }
+{% endschema %}

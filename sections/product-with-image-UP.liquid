@@ -1,0 +1,222 @@
+<style>
+.main-P-W-T{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    place-content: center;
+    align-items: center;
+    background-color: #F7D0D0;
+}
+.main-P-W-T img{
+    width: 100%;
+}
+.f-v-text h2{
+    font-weight: 700;
+    font-size: 40px;
+    color: #131315;
+    text-align:left;
+}
+.f-v-text li{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: 0 0 4px;
+    padding: 0;
+    font-weight: 500;
+    font-size: 15px;
+    font-family: 'Outfit'
+}
+.f-v-text li::before{
+    content: url('{{ "check-mark.svg" | asset_url }}');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    height: 0;
+    position: relative;
+    top: 7px;
+    left: 2px;
+}
+.ddd-T-P{
+    padding: 7px 20px;
+    background: #ABE1ED;
+    border: 4px solid #FFFFFF;
+    box-shadow: 5px 5px 10px rgb(171 225 237 / 25%);
+    backdrop-filter: blur(2px);
+    border-radius: 17px;
+    color: black;
+    font-weight: 600;
+    width: fit-content;
+    font-size: 18px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.f-v-text ul{
+    padding: 8px 0;
+    display: flex;
+    gap: 5px;
+}
+.f-v-text h5{
+    font-weight: 600;
+}
+.f-v-text p{
+    padding-bottom: 15px;
+    font-weight: 500;
+}
+.f-v-text{
+    width: min(527px, 90%);
+    margin: auto;
+}
+@media screen and (min-width:1600px){
+    .f-v-text h2{
+        font-size: 62px;
+        line-height: 85px;
+    }
+    .f-v-text h5{
+        font-size: 26px;
+        line-height: 36px;
+    }
+    .f-v-text p{
+        font-size: 20px;
+        line-height: 36px;
+    }
+    .f-v-text li{
+        font-size: 20px;
+        line-height: 25px;
+    }
+    .ddd-T-P{
+        font-size: 28px;
+        line-height: 35px;
+    }
+    .f-v-text{
+        width: min(744px, 90%);
+        gap:15px;
+    }
+}
+@media screen and (max-width:1186px){
+    .main-P-W-T{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .responvieW{
+        width: 100%;
+    }
+    .f-v-text{
+        text-align: center !important;
+        padding: 25px 0;
+    }
+    .f-v-text h2{
+        text-align: center;
+    }
+    .f-v-text ul{
+        justify-content: center;
+    }
+    .ddd-T-P{
+        margin: auto;
+    }
+}
+@media screen and (max-width:800px){
+    .f-v-text li{
+        font-size: 12px;
+    }
+    .f-v-text h2{
+        font: 29px;
+    }
+}
+</style>
+<div class="main-P-W-T">
+    <div class="f-v-text">
+        <h2>
+            {{ section.settings.heading-text }}
+        </h2>
+        <h5>{{ section.settings.semi-heading }}</h5>
+        <ul>
+            {% if section.settings.li-1 != blank %}
+                
+                <li>{{ section.settings.li-1 }}</li>
+            {% endif %}
+            {% if section.settings.li-1 != blank %}
+                <li>{{ section.settings.point-2 }}</li>         
+            {% endif %}
+            {% if section.settings.li-1 != blank %}
+                <li>{{ section.settings.point-3 }}</li>
+                
+            {% endif %}
+        </ul>
+        <p>{{ section.settings.paragrph }}</p>
+        <a class="ddd-T-P" href="{{ section.settings.lastlinkid }}">{{ section.settings.button-ach }}</a>
+    </div>
+    <div class="responvieW">
+        <img src="{{ section.settings.place-image | img_url: 'master' }}" alt="">
+    </div>
+</div>
+{% schema %}
+{
+"name": "Image With Progress",
+"settings": [
+    {
+      "type": "image_picker",
+      "id": "place-image",
+      "label":"Past Image"
+    },
+    {
+      "type": "text",
+      "id": "heading-text",
+      "label": "Heading ",
+      "default": "Pas d'effet, pas de soucis!"
+    },
+    {
+      "type": "text",
+      "id": "semi-heading",
+      "label": "Small Heading",
+      "default": "Satisfait ou remboursé"
+    },
+    {
+      "type": "text",
+      "id": "li-1",
+      "label": "Point-1",
+      "default": "Achat sans risque"
+    },
+    {
+      "type": "text",
+      "id": "point-2",
+      "label": "Point-2",
+      "default": "Efficace"
+    },
+    {
+      "type": "text",
+      "id": "point-3",
+      "label": "Point-3",
+      "default": "Premium"
+    },
+    {
+      "type": "textarea",
+      "id": "paragrph",
+      "label": "Paragraph",
+      "default": "\"Nous sommes convaincus de la qualité de nos produits. C'est pourquoi, nous vous assurons un achat sans risque, grâce à notre garantie satisfait ou remboursé sous 180 jours. Suivez la procédure en 6 étapes pour être éligible. Cliquez ci-dessous pour en savoir plus sur la garantie de remboursement de 180 jours."
+    },
+    {
+      "type": "text",
+      "id": "button-ach",
+      "label": "Button Text",
+      "default": "en savoir plus"
+    },
+    {
+      "type": "url",
+      "id": "lastlinkid",
+      "label": "Button URL"
+    }
+],
+"presets": [
+{
+"name": "Image-Progress",
+"category": "ADVANCED LAYOUT"
+}
+]
+}
+{% endschema %}
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

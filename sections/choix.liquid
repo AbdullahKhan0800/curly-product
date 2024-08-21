@@ -1,0 +1,503 @@
+<style>
+    .chiox {
+        background:url('{{ ' scroll-section-bc.png' | asset_url }}');
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        padding-top: 32px;
+        align-items: center;
+        justify-content: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding-bottom: 100px;
+        background-position: bottom;
+    }
+
+    .chixfirsta {
+        background: #FFFFFF;
+        border: 4px solid #F5F5F5;
+        box-shadow: 5px 5px 20px #FAF1DB;
+        border-radius: 25px;
+        text-decoration: none;
+        padding: 5px 23px;
+        font-weight: 500;
+        font-family: 'Outfit';
+    }
+
+    .chiox h2 {
+        padding: 14px 0 26px;
+        font-weight: 700;
+        font-size: 39px;
+        text-align: center;
+        line-height: 43px;
+        width: 716px;
+        color: #131315;
+    }
+
+    .chiox h2 span {
+        background: -webkit-linear-gradient(48deg, #F7717D 17.89%, rgba(247, 113, 125, 0.5) 82.11%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .owl-testinomial {
+        width: min(1070px, 75%);
+        margin: auto;
+    }
+
+    .chiox .owl-nav {
+        display: flex;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        justify-content: space-between;
+    }
+
+    .chiox .owl-carousel .owl-nav button.owl-next img,
+    .chiox .owl-carousel .owl-nav button.owl-prev img {
+        margin: auto;
+    }
+
+    .chiox .owl-carousel .owl-nav button.owl-next,
+    .chiox .owl-carousel .owl-nav button.owl-prev {
+        width: 70px;
+        font: inherit;
+        height: 70px;
+        border-radius: 50%;
+        border: 2px solid black !important;
+    }
+
+    .ts-slide {
+        background: #FFFFFF;
+        border: 4px solid #F5F5F5;
+        box-shadow: 5px 5px 20px #FAF1DB;
+        border-radius: 25px;
+    }
+
+    .sds-clix {
+        padding: 20px;
+        display: grid;
+        row-gap: 7px;
+    }
+
+    .sec-clis img {
+        width: 90px !important;
+    }
+
+    .sec-clis {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        gap: 20px;
+        font-weight: bold;
+    }
+
+    .before-image-tick {
+        position: relative;
+    }
+
+    .before-image-tick li {
+        margin-left: 33px;
+        font-weight: bold;
+    }
+
+    .before-image-tick li::before {
+        content: url('{{ ' check-mark.svg' | asset_url }}');
+        position: absolute;
+        left: -4px;
+        top: -4px;
+    }
+
+    button.owl-next {
+        position: relative;
+        left: 84px;
+        bottom: -230px;
+    }
+
+    button.owl-prev {
+        position: relative;
+        left: -84px;
+        bottom: -230px;
+    }
+
+    .nav-right {
+        position: relative;
+        left: 2px;
+    }
+
+    .nav-left {
+        position: relative;
+        left: -2px;
+    }
+
+    .last-acc {
+        padding: 7px 20px;
+        background: #ABE1ED;
+        border: 4px solid #FFFFFF;
+        box-shadow: 5px 5px 10px rgba(171, 225, 237, 0.25);
+        backdrop-filter: blur(2px);
+        border-radius: 17px;
+        color: black;
+        font-weight: 600;
+        margin: 30px 0 0 0;
+        font-size: 18px;
+    }
+
+    .mi-l-clix {
+        width: 75%;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        place-content: space-around;
+        margin: auto;
+        margin-top: 40px;
+    }
+
+    .l-clix img {
+        width: 45px;
+    }
+
+    .l-clix h5 {
+        width: 97px;
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    .l-clix {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mian-nwoeirj {
+        display: none;
+    }
+
+    @media screen and (min-width:1600px) {
+        .owl-testinomial {
+            width: min(1530px, 75%);
+        }
+
+        .chiox h2 {
+            font-size: 62px;
+            line-height: 78px;
+            width: 1403px;
+        }
+
+        .sds-clix p {
+            font-size: 20px;
+            line-height: 35px;
+
+        }
+
+        .sec-clis img {
+            width: 129px;
+        }
+
+        .sec-clis h5 {
+            font-size: 26px;
+            line-height: 35px;
+        }
+
+        .before-image-tick li {
+            font-size: 20px;
+            line-height: 35px;
+        }
+
+        .sds-clix {
+            padding-bottom: 40px;
+        }
+
+        .chiox .owl-carousel .owl-nav button.owl-next,
+        .chiox .owl-carousel .owl-nav button.owl-prev {
+            width: 130px;
+            height: 130px;
+            border-width: 4px;
+        }
+
+        .chixfirsta {
+            font-size: 26px;
+            line-height: 150%;
+        }
+
+        .owl-testinomial button.owl-next {
+            left: 141px;
+            bottom: -315px;
+        }
+
+        .owl-testinomial button.owl-prev {
+            left: -141px;
+            bottom: -315px;
+        }
+
+        .last-acc {
+            padding: 16px 28px;
+            font-size: 28px;
+            line-height: 35px;
+            border-radius: 30px;
+        }
+
+        .l-clix h5 {
+            font-size: 26px !important;
+            line-height: 30px;
+            width: 191px !important;
+        }
+
+        .l-clix img {
+            width: 60px;
+        }
+    }
+
+    @media screen and (max-width:1165px) {
+        .owl-testinomial {
+            width: min(1000px, 75%);
+        }
+
+        .chiox h2 {
+            width: 90%;
+            margin: auto;
+        }
+    }
+
+    @media screen and (max-width:896px) {
+        .mi-l-clix {
+            width: 90%;
+        }
+    }
+
+    @media screen and (max-width:703px) {
+
+        .chiox .owl-carousel .owl-nav button.owl-next,
+        .chiox .owl-carousel .owl-nav button.owl-prev {
+            width: 60px;
+            font: inherit;
+            height: 60px;
+            border-radius: 50%;
+            border: 2px solid black !important;
+        }
+
+        .owl-testinomial {
+            width: min(1000px, 70%)
+        }
+
+        .mian-nwoeirj {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            place-content: space-evenly;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .mi-l-clix div:nth-child(4) {
+            display: none;
+        }
+
+        .mi-l-clix div:nth-child(5) {
+            display: none;
+        }
+
+        .mi-l-clix {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    @media screen and (max-width:535px) {
+        .owl-testinomial button.owl-next {
+            left: 60px !important;
+        }
+
+        .owl-testinomial button.owl-prev {
+            left: -60px !important;
+        }
+
+        .chiox h2 {
+            font-size: 32px;
+        }
+
+        .chiox {
+            background:url('{{ ' small-bc.png' | asset_url }}');
+            background-position: bottom;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: bottom;
+        }
+    }
+
+    @media screen and (max-width:500px) {
+        .owl-testinomial-p {
+            width: 265px !important;
+        }
+
+        .main-pp {
+            padding-bottom: 60px !important;
+        }
+    }
+</style>
+<div class="chiox">
+    <a class="chixfirsta" href="{{ section.settings.first-link-text }}">{{ section.settings.ancher-textone }}</a>
+    <h2>{{ section.settings.heading-test }}</h2>
+    <div class="owl-testinomial owl-carousel owl-theme">
+        {%- for block in section.blocks -%}
+
+        <div class="ts-slide item">
+            <div class="rating-clex">
+                <img src="{{ block.settings.image-slide | img_url: 'master' }}" alt="slide-baby-image" />
+            </div>
+            <div class="sds-clix">
+                <div class="sec-clis">
+                    <img src="https://cdn.shopify.com/s/files/1/0510/6846/9429/files/5-star.png?v=1669353033"
+                        alt="stars" />
+                    <h5>{{ block.settings.heading-text }}</h5>
+                </div>
+                <p>{{ block.settings.paragraph-her }}</p>
+                <ul class="before-image-tick">
+                    <li>{{ block.settings.lastheading }}</li>
+                </ul>
+            </div>
+        </div>
+
+        {%- endfor -%}
+    </div>
+    <a class="last-acc" href="{{ section.settings.url-id }}">{{ section.settings.last-link-text }}</a>
+    <div class="mi-l-clix">
+        <div class="l-clix">
+            <img src="https://cdn.shopify.com/s/files/1/0510/6846/9429/files/206.png?v=1669372274" alt="">
+            <h5>made inFrance</h5>
+        </div>
+        <div class="l-clix">
+            <img src="https://cdn.shopify.com/s/files/1/0510/6846/9429/files/207.png?v=1669372274" alt="">
+            <h5>vegan et naturel</h5>
+        </div>
+        <div class="l-clix">
+            <img src="https://cdn.shopify.com/s/files/1/0510/6846/9429/files/animal.png?v=1669567777" alt="">
+            <h5>non testé sur le animaux</h5>
+        </div>
+        <div class="l-clix">
+            <img src="https://cdn.shopify.com/s/files/1/0510/6846/9429/files/208.png?v=1669372274" alt="">
+            <h5>sans conservateurs</h5>
+        </div>
+        <div class="l-clix">
+            <img src="https://cdn.shopify.com/s/files/1/0510/6846/9429/files/sugar.png?v=1669567972" alt="">
+            <h5>réduit en sucre</h5>
+        </div>
+    </div>
+    <div class="mian-nwoeirj">
+        <div class="l-clix">
+            <img src="https://cdn.shopify.com/s/files/1/0510/6846/9429/files/208.png?v=1669372274" alt="">
+            <h5>sans conservateurs</h5>
+        </div>
+        <div class="l-clix">
+            <img src="https://cdn.shopify.com/s/files/1/0510/6846/9429/files/sugar.png?v=1669567972" alt="">
+            <h5>réduit en sucre</h5>
+        </div>
+    </div>
+</div>
+<script>
+    $('.owl-testinomial').owlCarousel({
+        loop: true,
+        margin: 30,
+        nav: true,
+        dots: false,
+        navText: [
+            "<img class='nav-left' src='{{ 'left.svg' | asset_url }}' />",
+            "<img class='nav-right' src='{{ 'next.svg' | asset_url }}' />"
+        ],
+        responsive: {
+            0: {
+                items: 1,
+                navText: [
+                    "<img class='nav-left' src='{{ 'small-prev.svg' | asset_url }}' />",
+                    "<img class='nav-right' src='{{ 'small-next.svg' | asset_url }}' />"
+                ]
+            },
+            680: {
+                items: 2
+            },
+            1165: {
+                items: 3,
+            }
+        }
+    })
+</script>
+{% schema %}
+{
+"name": "Choix Testimonial",
+"settings": [
+{
+"type": "html",
+"id": "heading-test",
+"placeholder": "Heading Text",
+"default": "Des milliers de clients satisfaits utilisent les gummies <span>Beauty Boost</span> tous les jours",
+"label": "Heading Text",
+"info": "Plese use '<span>[Text]</span>' for the color Text "
+},
+{
+"type": "text",
+"id": "ancher-textone",
+"placeholder": "Choix #1 de gummies ",
+"default": "Choix #1 de gummies ",
+"label":"First Link"
+},
+{
+"type": "url",
+"id": "first-link-text",
+"label": "Link here"
+},
+{
+"type": "text",
+"id": "last-link-text",
+"placeholder": "Link Text",
+"default": "acheter maintenant",
+"label":"First Link"
+},
+{
+"type": "url",
+"id": "url-id",
+"label": "Last Link"
+}
+],
+"blocks": [
+{
+"type": "Slide",
+"name": "Slide",
+"settings": [
+{
+"type": "image_picker",
+"id": "image-slide",
+"label": "Image"
+},
+{
+"type": "text",
+"id": "heading-text",
+"placeholder": "Name",
+"default": "Legerate",
+"label": "Name Text"
+},
+{
+"type": "textarea",
+"id": "paragraph-her",
+"placeholder": "Paragraph",
+"default": "“Cela fait 1 semaine que je les prend , j'ai commander une cure de 3 mois et ",
+"label": "Paragraph Texts"
+},
+{
+"type": "text",
+"id": "lastheading",
+"placeholder": "Nick Name",
+"default": "Lea99",
+"label": "Nick Name"
+}
+]
+}
+],
+"presets": [
+{
+"name": "Choix Testimonial"
+}
+]
+}
+{% endschema %}
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

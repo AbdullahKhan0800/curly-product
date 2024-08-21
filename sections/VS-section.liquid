@@ -1,0 +1,284 @@
+<style>
+.main-C-C{
+    background: #F5F5F5;
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+.main-C-C p{
+    padding-bottom: 30px;
+    text-align: center;
+    font-weight: 500;
+}
+.main-C-C h2{
+    font-weight: 700;
+    font-size: 40px;
+    color: #131315;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.main-C-lC-vs{
+    max-width:1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2,39%);
+    place-content: space-evenly;
+    position: relative;
+}
+.left-before-Clix-CC img{
+    filter: drop-shadow(5px 5px 20px rgba(247, 113, 125, 0.25));
+    border-radius: 19px;
+}
+.right-after-Clix-CC img{
+    filter: drop-shadow(5px 5px 20px rgba(64, 201, 102, 0.25));
+    border-radius: 19px;
+}
+.left-before-Clix-CC{
+    background: rgba(247, 113, 125, 0.1);
+    border-radius: 25px;
+    position: relative;
+
+}
+.right-after-Clix-CC{
+    background: rgba(64, 201, 102, 0.1);
+    border-radius: 25px;
+    position: relative;
+}
+.inner-conatiner-left{
+    text-align: right;
+}
+.inner-conatiner-left ul li{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin: 0 0 4px;
+    padding: 0;
+    font-weight: 500;
+    font-family: 'Outfit';
+    font-size: 15px;
+}
+.inner-conatiner-left ul li::after{
+    content: url('{{ "cancel2.svg" | asset_url }}');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    height: 0;
+    position: relative;
+    top: 7px;
+    left: 7px;
+}
+.inner-conatiner-right ul li{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: 0 0 4px;
+    padding: 0;
+    font-weight: 500;
+    font-size: 15px;
+    font-family: 'Outfit';
+}
+.inner-conatiner-right ul li::before{
+    content: url('{{ "checkv2.svg" | asset_url }}');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    height: 0;
+    position: relative;
+    top: 7px;
+    left: -6px;
+}
+.inner-conatiner-right{
+    text-align: left;
+}
+.inner-conatiner-clixssvs{
+    padding: 20px 18px 15px;
+}
+.inner-conatiner-clixssvs ul{
+    gap: 8px;
+    display: grid;
+}
+.imagVSS{
+    position: absolute;
+    left: 41%;
+    z-index: 99;
+    top: 94px;
+    width: 174px;
+}
+.vs-ul{
+    margin-top: 10px;
+}
+@media screen and (min-width:1600px){
+    .main-C-lC-vs{
+        max-width: 1194px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(2,39%);
+        place-content: space-evenly;
+        position: relative;
+    }
+    .imagVSS {
+        position: absolute;
+        left: 41%;
+        z-index: 99;
+        top: 149px;
+        width: 200px;
+    }
+}
+@media screen and (max-width:932px){
+    .imagVSS{
+        left: 40%;
+        width: 161px;
+    }
+}
+@media screen and (max-width:932px){
+    .imagVSS{
+        left: 41%;
+        width: 138px;
+    }
+}
+@media screen and (max-width:668px){
+    .imagVSS{
+        left: 41%;
+        width: 111px;
+    }
+}
+@media screen and (max-width:515px){
+    .imagVSS{
+        left: 41%;
+        z-index: 99;
+        top: 69px;
+        width: 85px;
+    }
+    .main-C-C h2{
+        font-size: 31px;
+    }
+    .inner-conatiner-clixssvs li{
+        font-size: 11px !important;
+    }
+    .main-C-lC-vs{
+        grid-template-columns: repeat(2,41%);
+        place-content: space-around;
+    }
+    .inner-conatiner-clixssvs {
+        padding: 5px 12px 15px;
+    }
+}
+</style>
+<div class="main-C-C">
+    <h2>{{ section.settings.headig-text }}</h2>
+    <p>{{ section.settings.semi-heading }}</p>
+    <div class="main-C-lC-vs">
+        {%- for block in section.blocks -%}
+        {%- case block.type -%}
+            {%- when 'Before' -%}
+            <div class="left-before-Clix-CC">
+                <img src="{{ block.settings.Image-forpich-before | img_url: 'master' }}" alt="before">
+                <div class="inner-conatiner-left inner-conatiner-clixssvs">
+                <ul class="vs-ul">
+                    {%- for block in section.blocks -%}
+                        {%- case block.type -%}
+                            {%- when 'Before-Li' -%}
+                             <li>{{ block.settings.list }}</li>    
+                        {%- endcase -%}
+                    {%- endfor -%}
+                </ul>
+                </div>
+            </div>
+            {%- when 'After' -%}
+            <img class="imagVSS" src="{{ 'VS.png' | asset_url }}" />
+            <div class="right-after-Clix-CC">
+                <img src="{{ block.settings.Image-forpich-after | img_url: 'master' }}" alt="after">
+                <div class="inner-conatiner-right inner-conatiner-clixssvs">
+                <ul class="vs-ul">
+                    {%- for block in section.blocks -%}
+                        {%- case block.type -%}
+                            {%- when 'After-Li' -%}
+                             <li>{{ block.settings.list-p }}</li>    
+                        {%- endcase -%}
+                    {%- endfor -%}
+                </ul>
+                </div>
+            </div>
+        {%- endcase -%}
+        {%- endfor -%}
+    </div>
+</div>
+{% schema %}
+{
+"name": "Product Vs Product",
+"settings": [
+    {
+      "type": "text",
+      "id": "headig-text",
+      "label": "Heading Text",
+      "default": "Pas besoin de nous croire sur parole..."
+    },
+    {
+      "type": "text",
+      "id": "semi-heading",
+      "label": "Semi Heading",
+      "default": "\"J'utilise le Beauty Boost depuis 4 mois et rien à dire, vraiment des résultats bluffants\" - Julia | Cliente Curaly"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "Before",
+      "name": "Before",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "Image-forpich-before",
+          "label":"Image Here"
+        }
+      ]
+    },
+    {
+      "type": "After",
+      "name": "After",
+      "settings": [
+        {
+            "type": "image_picker",
+            "id": "Image-forpich-after",
+            "label":"Image Here"
+        }
+      ]
+    },
+    {
+      "type": "Before-Li",
+      "name": "Before List",
+      "settings": [
+        {
+          "type": "text",
+          "id": "list",
+          "label": "B-List",
+          "default": "Perte de cheveux"
+        }
+      ]
+    },
+    {
+      "type": "After-Li",
+      "name": "After-Li",
+      "settings": [
+        {
+          "type": "text",
+          "id": "list-p",
+          "label": "B-List-before ",
+          "default": "Perte de cheveux"
+        }
+      ]
+    }
+  ],
+"presets": [
+{
+"name": "Product Vs Product",
+"category": "ADVANCED LAYOUT"
+}
+]
+}
+{% endschema %}
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

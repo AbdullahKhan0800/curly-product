@@ -1,0 +1,359 @@
+<style>
+    .button-two-multi{
+        display: none;
+    }
+    .main-clix-M-I{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+    }
+    .main-clix-M-I ul{
+        display: flex;
+        margin-top: 10px;
+        margin-bottom: 30px;
+        gap: 20px;        
+    }
+    .main-clix-M-I ul li{
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        margin: 0 0 4px;
+        padding: 0;
+        font-weight: 500;
+        font-family: 'Outfit';
+    }
+    .main-clix-M-I ul li::before{
+        content: url("{{ 'check-mark.svg' | asset_url }}");
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        height: 0;
+        position: relative;
+        top: 7px;
+        left: 7px;
+    }
+    .multi-images-buttons{
+        display: flex;
+        gap:30px;
+    }
+    .active-btn{
+        background: #131315;
+        border: 4px solid #FFFFFF;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(2px);
+        /* Note: backdrop-filter has minimal browser support */
+        color: white;
+        font-weight: 700;
+        border-radius:18px;
+        padding:8px 0;
+        width:177px;
+        text-align: center;
+    }
+    .disable-btn{
+        background: white;
+        border: 4px solid black;
+        color: black;
+        font-weight: 700;
+        border-radius:18px;
+        padding:8px 0;
+        width:177px;
+        text-align: center;
+    }
+    .multi-content-container{
+        width: min(1000px,90%);
+    }
+    .single-multi-container{
+        display: grid;
+        grid-template-columns: repeat(2,371px);
+        place-content: space-evenly;
+        gap: 58px;
+        margin:50px 0;
+    }
+    .rightleft-M{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    .rightleft-M img{
+        border-radius: 50%;
+            width: 124px;
+    }
+    .inner-div-clis-M span{
+        color: #BEBEBE;
+        font-size:14px ;
+    }
+    .inner-div-clis-M h4{
+        font-weight: 500;
+        font-size: 19px;
+    }
+    .inner-div-clis-M{
+        display: grid;
+    }
+    .inner-div-clis-M p{
+        font-size: 14px;
+    }
+    .main-clix-M-I h2{
+        font-weight: 700;
+        font-size: 40px;
+        color: #131315;
+    }
+    .last-acc-M {
+        padding: 7px 20px;
+        background: #ABE1ED;
+        border: 4px solid #FFFFFF;
+        box-shadow: 5px 5px 10px rgb(171 225 237 / 25%);
+        backdrop-filter: blur(2px);
+        border-radius: 17px;
+        color: black;
+        font-weight: 600;
+        margin: 0px 0 0 0;
+        font-size: 18px;
+        margin-bottom: 50px;
+    }    
+    @media screen and (min-width:1600px){
+        .main-clix-M-I h2{
+            font-size: 62px;
+            line-height: 85px;
+        }
+        .main-clix-M-I ul li{
+            font-size: 26px;
+            line-height: 30px;
+        }
+        .active-btn{
+            font-size: 28px;
+            line-height: 35px;
+            padding: 14px 0;
+            width: 250px;
+        }
+        .disable-btn{
+            font-size: 28px;
+            line-height: 35px;
+            padding: 14px 0;
+            width: 250px;
+        }
+        .rightleft-M img{
+            width: 185px !important;
+        }
+        .inner-div-clis-M h4{
+            font-size: 35px;
+            line-height: 36px;
+        }
+        .inner-div-clis-M span{
+            font-size: 20px;
+            line-height: 35px;
+        }
+        .inner-div-clis-M p{
+            font-size: 20px;
+            line-height: 35px;
+        }
+        .single-multi-container{
+            grid-template-columns: repeat(2,570px);
+            width: min(1530px,90%);
+        }
+        .main-clix-M-I ul{
+            margin-bottom: 70px;
+        }
+        .last-acc-M{
+            font-size: 28px;
+            line-height: 35px;
+            padding: 11px 35px;
+        }
+    }
+    @media screen and (max-width:818px){
+        .main-clix-M-I h2{
+            width: 90%;
+            margin: auto;
+            text-align: center;
+            font-size: 31px;
+        }
+        .single-multi-container{
+            grid-template-columns:1fr;
+            place-items: baseline;
+        }
+        .main-clix-M-I ul li{
+            font-size:13px;
+        }
+        .main-clix-M-I ul{
+            gap: 0;
+        }
+    }
+    @media screen and (max-width:600px){
+        .multi-images-buttons{
+            gap: 10px;
+        }
+        .main-clix-M-I h2{
+            font-size: 29px;
+        }
+    }
+</style>
+<div class="main-clix-M-I">
+    <h2>La parfaite combinaison d'ingrédients</h2>
+    <ul>
+        <li>ingrédients premium</li>
+        <li>goût délicieux</li>
+        <li>dosage efficace</li>
+    </ul>
+    <div class="multi-images-buttons">
+        <button id="butnOne" class="active-btn" onclick="SlideOneShow()">Ingrédients</button>
+        <button id="butnTwo" class="disable-btn" onclick="SlideTwoShow()">goût</button>
+    </div>
+    <div class="multi-content-container button-one-multi">
+        <div class="single-multi-container">
+            <div class="rightleft-M">
+                <img src="https://cdn.shopify.com/s/files/1/0510/6846/9429/files/roquette_2d9b132c-61cd-4439-b88c-b58116a34367.png?v=1669361173" alt="icon-image" />
+                <div class="inner-div-clis-M">
+                    <h4>Roquette</h4>
+                    <span>1000 mg</span>
+                    <p>contribue à la stimulation du bulbe du cheveux et de la favorisation de la croissance des cheveux.</p>
+                </div>
+            </div>
+            <div class="rightleft-M">
+                <img src="https://cdn.shopify.com/s/files/1/0510/6846/9429/files/prele_d73ccb2d-d76f-4eee-823c-e4b29c0efe64.png?v=1669361196" alt="icon-image" />
+                <div class="inner-div-clis-M">
+                    <h4>La Prêle</h4>
+                    <span>1000 mg</span>
+                    <p>favorise la croissance, le renforcement des cheveux et l'amélioration de l’aspect des ongles.</p>
+                </div>
+            </div>
+        </div>
+        <div class="single-multi-container">
+            <div class="rightleft-M">
+                <img src="https://cdn.shopify.com/s/files/1/0510/6846/9429/files/myrtille_d15a19c4-766d-4472-a530-27debc391722.png?v=1669361220" alt="icon-image" />
+                <div class="inner-div-clis-M">
+                    <h4>La Myrtille</h4>
+                    <span>1000 mg</span>
+                    <p>active la microcirculation du cuir chevelu permettant une meilleure santé et une meilleure pousse des cheveux.</p>
+                </div>
+            </div>
+            <div class="rightleft-M">
+                <img src="https://cdn.shopify.com/s/files/1/0510/6846/9429/files/zinc_a22f0aae-f6f1-4396-8d11-1e9ddb968bd8.png?v=1669361243" alt="icon-image" />
+                <div class="inner-div-clis-M">
+                    <h4>Le Zinc</h4>
+                    <span>1000 mg</span>
+                    <p>contribue au maintien de cheveux, d'ongles et d’une peau normale. Mais aussi à la protection des cellules contre le stress oxydatif.</p>
+                </div>
+            </div>
+        </div>
+        <div class="single-multi-container">
+            <div class="rightleft-M">
+                <img src="https://cdn.shopify.com/s/files/1/0510/6846/9429/files/cuivre_c37e987d-7dd1-4987-95a9-3b2db8087f03.png?v=1669361265" alt="icon-image" />
+                <div class="inner-div-clis-M">
+                    <h4>Le Cuivre</h4>
+                    <span>1000 mg</span>
+                    <p>favorise la pigmentation normale de des cheveux et de la peau.</p>
+                </div>
+            </div>
+            <div class="rightleft-M">
+                <img src="https://cdn.shopify.com/s/files/1/0510/6846/9429/files/selenium_b8a8dbba-9ba2-462e-9e22-0ae64340700b.png?v=1669361285" alt="icon-image" />
+                <div class="inner-div-clis-M">
+                    <h4>Le Sélénium</h4>
+                    <span>1000 mg</span>
+                    <p>contribue au maintien de cheveux et d'ongles normaux et à la protection des cellules contre le stress oxydatif et donc contre le vieillissement des cellules.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="multi-content-container button-two-multi">
+        <div class="single-multi-container">
+            <div class="rightleft-M">
+                <img src="https://cdn.shopify.com/s/files/1/0510/6846/9429/files/prele_d73ccb2d-d76f-4eee-823c-e4b29c0efe64.png?v=1669361196" alt="icon-image" />
+                <div class="inner-div-clis-M">
+                    <h4>La Prêle</h4>
+                    <span>1000 mg</span>
+                    <p>favorise la croissance, le renforcement des cheveux et l'amélioration de l’aspect des ongles.</p>
+                </div>
+            </div>
+            <div class="rightleft-M">
+                <img src="https://cdn.shopify.com/s/files/1/0510/6846/9429/files/roquette_2d9b132c-61cd-4439-b88c-b58116a34367.png?v=1669361173" alt="icon-image" />
+                <div class="inner-div-clis-M">
+                    <h4>Roquette</h4>
+                    <span>1000 mg</span>
+                    <p>contribue à la stimulation du bulbe du cheveux et de la favorisation de la croissance des cheveux.</p>
+                </div>
+            </div>
+        </div>
+        <div class="single-multi-container">
+            <div class="rightleft-M">
+                <img src="https://cdn.shopify.com/s/files/1/0510/6846/9429/files/zinc_a22f0aae-f6f1-4396-8d11-1e9ddb968bd8.png?v=1669361243" alt="icon-image" />
+                <div class="inner-div-clis-M">
+                    <h4>Le Zinc</h4>
+                    <span>1000 mg</span>
+                    <p>contribue au maintien de cheveux, d'ongles et d’une peau normale. Mais aussi à la protection des cellules contre le stress oxydatif.</p>
+                </div>
+            </div>
+            <div class="rightleft-M">
+                <img src="https://cdn.shopify.com/s/files/1/0510/6846/9429/files/myrtille_d15a19c4-766d-4472-a530-27debc391722.png?v=1669361220" alt="icon-image" />
+                <div class="inner-div-clis-M">
+                    <h4>La Myrtille</h4>
+                    <span>1000 mg</span>
+                    <p>active la microcirculation du cuir chevelu permettant une meilleure santé et une meilleure pousse des cheveux.</p>
+                </div>
+            </div>
+        </div>
+        <div class="single-multi-container">
+            <div class="rightleft-M">
+                <img src="https://cdn.shopify.com/s/files/1/0510/6846/9429/files/selenium_b8a8dbba-9ba2-462e-9e22-0ae64340700b.png?v=1669361285" alt="icon-image" />
+                <div class="inner-div-clis-M">
+                    <h4>Le Sélénium</h4>
+                    <span>1000 mg</span>
+                    <p>contribue au maintien de cheveux et d'ongles normaux et à la protection des cellules contre le stress oxydatif et donc contre le vieillissement des cellules.</p>
+                </div>
+            </div>
+            <div class="rightleft-M">
+                <img src="https://cdn.shopify.com/s/files/1/0510/6846/9429/files/cuivre_c37e987d-7dd1-4987-95a9-3b2db8087f03.png?v=1669361265" alt="icon-image" />
+                <div class="inner-div-clis-M">
+                    <h4>Le Cuivre</h4>
+                    <span>1000 mg</span>
+                    <p>favorise la pigmentation normale de des cheveux et de la peau.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="last-acc-M" href="#">voir le tableau nutritionnel</a>
+</div>
+
+<script>
+    let slidesOne = document.querySelector('.button-one-multi')  
+    let slidesTwo = document.querySelector('.button-two-multi')
+    let buttonONe = document.querySelector('#butnOne')
+    let buttonTwo = document.querySelector('#butnTwo')
+    function SlideOneShow (){
+        slidesOne.style.display = 'block';
+        slidesTwo.style.display = 'none';
+        buttonONe.classList.add('active-btn')
+        buttonONe.classList.remove('disable-btn')
+        buttonTwo.classList.add('disable-btn')
+        buttonTwo.classList.remove('active-btn')
+    }
+    function SlideTwoShow (){
+        slidesOne.style.display = 'none'
+        slidesTwo.style.display = 'block'
+        buttonTwo.classList.add('active-btn')
+        buttonTwo.classList.remove('disable-btn')
+        buttonONe.classList.add('disable-btn')
+        buttonONe.classList.remove('active-btn')
+    }
+</script>
+
+{% schema %}
+{
+"name": "Multi Images Clix",
+"settings": [
+],
+"presets": [
+{
+"name": "Multi Images Clix",
+"category": "ADVANCED LAYOUT"
+}
+]
+}
+{% endschema %}
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

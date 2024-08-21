@@ -1,0 +1,359 @@
+<style>
+    .owl-testinomial-p {
+        width: min(1000px,90%);
+        margin:auto;
+        
+    }
+    .ts-slide-P{
+        background: #FDF8ED;
+        border: 4px solid #FFFFFF;
+        box-shadow: 5px 5px 20px #FAF1DB;
+        border-radius: 25px;
+        position: relative;
+        padding-top: 60px;
+        margin-top:70px;
+    }
+    .absoute-PP{
+        width: 130px !important;
+        position: absolute;
+        top: -65px;
+        {%- comment -%} left: 85px; {%- endcomment -%}
+    }
+    .absoute-P{
+        width: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .sds-clix-P{
+        padding: 20px;
+        display: grid;
+        row-gap: 7px;
+    }
+    .sec-clis-P img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        width: 90px !important;   
+    }
+    .sec-clis-P p{
+        font-size: 15px;
+    }
+    .before-image-tick-P{
+        position: relative;
+    }
+    .before-image-tick-P li{
+        margin-left: 33px;
+        padding-top: 10px;
+        font-weight: bold;
+        display: flex;
+        justify-content: right;
+    }
+    .before-image-tick-P li::before{
+        content: url('{{ "check-mark.svg" | asset_url }}');
+        position: relative;
+        right: -11px;
+        top: -4px;
+    }
+    .owl-testinomial-p button.owl-prev {
+        position: relative;
+        left: -84px;
+        bottom: -230px;
+    }
+    .mi-l-clix-P{
+        width: 75%;
+        display: grid;
+        grid-template-columns:repeat(4,1fr) ;
+        place-content: space-around;
+        margin:auto;
+        margin-top: 40px;
+    }
+    .l-clix img{
+        width: 45px;
+    }
+    .l-clix h5{
+        width: 97px;
+        font-weight: 600;
+        font-size: 14px;
+    }
+    .l-clix{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .sds-clix-P h5{
+        font-weight: 600;
+    }
+    .P-date{
+        display: flex;
+        justify-content: space-between;
+        font-size: 15px;
+        padding: 0 0 10px 0;
+    }
+    .P-htwo{
+        padding: 32px 0 10px !important;
+        font-weight: 700 !important;
+        font-size: 39px !important;
+        text-align: center !important;
+        color: #131315 !important;
+        line-height: 1.2 !important;
+    }
+    @media screen and (min-width:1600px){
+        .owl-testinomial-p {
+            width: min(1426px,75%);
+            margin: auto;
+        }
+        .owl-testinomial-p button.owl-next{
+            left:150px !important;
+            bottom: -300px !important;
+        }
+        .owl-testinomial-p button.owl-prev{
+            left:-152px !important;
+            bottom: -300px !important;
+        }
+        .sec-clis-P img{
+            width: 129px !important;
+            height: 20px;
+        }
+        .sds-clix-P h5{
+            font-size: 26px;
+            line-height: 35px;
+        }
+        .sds-clix-P p{
+            font-size: 20px;
+            line-height: 35px;
+        }
+        .before-image-tick-P li{
+            font-size: 20px;
+            line-height: 35px;
+        }
+        .P-date{
+            font-size: 20px;
+            line-height: 35px;
+        }
+        .absoute-PP{
+            width:180px !important;
+        }
+        .before-image-tick-P li::before {
+            right: -4px;
+            top: -1px;
+        }
+        .sds-clix-P{
+            padding: 20px 50px;
+        }
+        .ts-slide-P{
+            margin-top:160px !important;
+            padding-top:70px !important;
+        }
+        .absoute-PP{
+            top: -108px;
+            {%- comment -%} left: 135px; {%- endcomment -%}
+        }
+        .P-htwo{
+            font-size: 64px !important;
+            line-height: 150% !important;
+            /* or 96px */
+            text-align: center !important;
+            letter-spacing: -0.022em !important;
+            color: #1E1E1E !important;
+        }
+    }
+    @media screen and (max-width:1165px){
+        .owl-testinomial-p {
+            width: min(1000px,75%);
+        }
+        {%- comment -%} .absoute-PP{
+            left:34%;
+        } {%- endcomment -%}
+    }
+    @media screen and (max-width:979px){
+        {%- comment -%} .absoute-PP{
+            left:30%;
+        } {%- endcomment -%}
+    }
+    @media screen and (max-width:810px){
+        {%- comment -%} .absoute-PP{
+            left:27%;
+        } {%- endcomment -%}
+    }
+    @media screen and (max-width:626px){
+        .chiox .owl-carousel .owl-nav button.owl-next, .chiox .owl-carousel .owl-nav button.owl-prev {
+            width: 42px;
+            font: inherit;
+            height: 42px;
+            border-radius: 50%;
+            border: 1px solid black !important;
+        }
+        .nav-right{
+            width: 13px;
+        }
+        .nav-left{
+            width: 13px;
+        }
+        .owl-testinomial-p button.owl-next{
+            left: 54px !important;
+        }
+       .owl-testinomial-p button.owl-prev{
+            left:-52px !important;
+        }
+    }
+    @media screen and (max-width:533px){
+        .mi-l-clix-P{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            place-content: space-around;
+            margin: auto;
+            margin-top: 40px;
+            gap: 12px;
+            width: 100%;
+        }
+        h2.P-htwo{
+            font-size: 20px !important;
+        }
+        .owl-testinomial-p{
+            max-width: 307px !important;
+        }
+    }
+</style>
+<div class="chiox main-pp"> 
+    <h2>Nos clients en parlent mieux que nous</h2>
+    <div class="owl-testinomial-p owl-carousel owl-theme">
+
+        {%- for block in section.blocks -%}
+            
+        <div class="ts-slide-P item">
+            <div class="absoute-P">
+                <img class="absoute-PP" src="{{ block.settings.image-slide | img_url: 'master' }}" alt="slide-jar-image" />
+            </div>
+            <div class="sds-clix-P">
+                <div class="sec-clis-P">
+                    <img src="https://cdn.shopify.com/s/files/1/0510/6846/9429/files/5-star.png?v=1669353033" alt="stars" />
+                </div>
+                <h5>{{ block.settings.heading-text }}</h5>
+                <p>{{ block.settings.paragraph-her }}</p>
+                <ul class="before-image-tick-P">
+                    <li>{{ block.settings.lastheading }}</li>
+                </ul>
+                <div class="P-date">
+                    <p style="font-weight: 400;color: #131315;">{{ block.settings.comment-text }}</p>
+                    <p style="font-weight: 400;color: #d1bc88;;">{{ block.settings.date-text }}</p>
+                </div>
+            </div>
+        </div>
+        
+        {%- endfor -%}
+        
+    </div>
+    <h2 class="P-htwo">Envie vous aussi d'adopter les gummies Curaly Beauty Boost ? </h2>
+    <a class="last-acc" href="#">acheter maintenant</a>
+    <div class="mi-l-clix-P">
+        <div class="l-clix">
+            <img src="https://cdn.shopify.com/s/files/1/0510/6846/9429/files/Group_201.png?v=1669378962" alt=""><h5>satisfait ou remboursé</h5>
+        </div>
+        <div class="l-clix">
+            <img src="https://cdn.shopify.com/s/files/1/0510/6846/9429/files/Group_202.png?v=1669378988" alt=""><h5>paiement sécurisé</h5>
+        </div>
+        <div class="l-clix">
+            <img src="https://cdn.shopify.com/s/files/1/0510/6846/9429/files/Group_203.png?v=1669379001" alt=""><h5>livraison en 48h offerte dès 50€</h5>
+        </div>
+        <div class="l-clix">
+            <img src="https://cdn.shopify.com/s/files/1/0510/6846/9429/files/Group_204.png?v=1669379012" alt=""><h5>service client réactif</h5>
+        </div>
+    </div>
+</div>
+<script>
+    $('.owl-testinomial-p').owlCarousel({
+        loop:true,
+        margin:30,
+        nav:true,
+        dots:false,
+        navText:[
+            "<img class='nav-left' src='{{ 'left.svg' | asset_url }}' />",
+            "<img class='nav-right' src='{{ 'next.svg' | asset_url }}' />"
+        ],
+        responsive:{
+            0:{
+                items:1,
+                navText:[
+                    "<img class='nav-left' src='{{ 'small-prev.svg' | asset_url }}' />",
+                    "<img class='nav-right' src='{{ 'small-next.svg' | asset_url }}' />"
+                ]
+            },
+            600:{
+                items:2
+            },
+            1165:{
+                items:3
+            }
+        }
+    })
+</script>
+{% schema %}
+    {
+        "name": "Product Testimonial",
+        "settings": [
+        ],
+        "blocks": [
+            {
+                "type": "Slide",
+                "name": "Slide",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "image-slide",
+                        "label": "Image"
+                    },
+                    {
+                        "type": "text",
+                        "id": "heading-text",
+                        "placeholder": "Name",
+                        "default": "Legerate",
+                        "label": "Name Text"
+                    },
+                    {
+                        "type": "textarea",
+                        "id": "paragraph-her",
+                        "placeholder": "Paragraph",
+                        "default": "“Cela fait 1 semaine que je les prend , j'ai commander une cure de 3 mois et ",
+                        "label": "Paragraph Texts"
+                    },
+                    {
+                        "type": "text",
+                        "id": "lastheading",
+                        "placeholder": "Nick Name",
+                        "default": "Lea99",
+                        "label": "Nick Name"
+                    },
+                    {
+                        "type": "text",
+                        "id": "comment-text",
+                        "placeholder": "Comment Product",
+                        "default": "Slim & Detox gummies",
+                        "label": "Product Name"
+                    },
+                    {
+                        "type": "text",
+                        "id": "date-text",
+                        "placeholder": "Date",
+                        "default": "17 oct. 2021",
+                        "label": "Date"
+                    }
+
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "Product Testimonial",
+                "category": "ADVANCED LAYOUT"
+            }
+        ]
+    }
+{% endschema %}
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

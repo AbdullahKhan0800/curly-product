@@ -1,0 +1,653 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "rating": {
+          "type": "rating",
+          "settings": {
+            "show_empty": false
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_tag": "h2"
+          }
+        },
+        "bb4a6251-4c99-48b8-86fc-15727134dd26": {
+          "type": "meta-description",
+          "settings": {
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "hide_sold_out_variants": false,
+            "stack_blocks": true,
+            "selector_mode": "block",
+            "color_mode": "color",
+            "size_chart_page": ""
+          }
+        },
+        "payment_terms": {
+          "type": "payment_terms",
+          "disabled": true,
+          "settings": {
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_payment_button": false,
+            "atc_button_background": "",
+            "atc_button_text_color": "",
+            "payment_button_background": "",
+            "payment_button_text_color": ""
+          }
+        },
+        "20ed2132-cd16-4da7-b4ac-af08d41ae1ea": {
+          "type": "alma",
+          "settings": {
+          }
+        },
+        "dc0cad3f-198d-4b56-afcf-d1ba8e13908d": {
+          "type": "line-item-images",
+          "settings": {
+          }
+        },
+        "174cca68-1194-4b2f-a059-f02f7625ae1f": {
+          "type": "collapsible_text",
+          "settings": {
+            "title": "Résultats?",
+            "content": "<p>Share some content to your customers about your products.<\/p>"
+          }
+        },
+        "aaefdf32-c2ed-4695-81e8-0bc29bbe4565": {
+          "type": "collapsible_text",
+          "settings": {
+            "title": "Recommandation de nos experts santé",
+            "content": "<p>Share some content to your customers about your products.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "rating",
+        "title",
+        "bb4a6251-4c99-48b8-86fc-15727134dd26",
+        "variant_picker",
+        "payment_terms",
+        "buy_buttons",
+        "20ed2132-cd16-4da7-b4ac-af08d41ae1ea",
+        "dc0cad3f-198d-4b56-afcf-d1ba8e13908d",
+        "174cca68-1194-4b2f-a059-f02f7625ae1f",
+        "aaefdf32-c2ed-4695-81e8-0bc29bbe4565"
+      ],
+      "settings": {
+        "full_width": false,
+        "show_fixed_add_to_cart": false,
+        "desktop_media_width": 50,
+        "desktop_media_layout": "carousel_thumbnails_bottom",
+        "mobile_media_size": "expanded",
+        "mobile_carousel_control": "thumbnails",
+        "enable_video_autoplay": false,
+        "enable_video_looping": true,
+        "enable_image_zoom": true,
+        "max_image_zoom_level": 3,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "input_background": "rgba(0,0,0,0)",
+        "input_text_color": ""
+      }
+    },
+    "16694127144d23f731": {
+      "type": "apps",
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "enable_review_integration": true,
+        "review_header_gradient": "linear-gradient(135deg, rgba(255, 194, 102, 1), rgba(255, 163, 26, 1) 100%)",
+        "review_header_text_color": "#000000",
+        "review_button_background": "#000000",
+        "review_button_text_color": "#ffffff"
+      }
+    },
+    "50cc236a-54a5-421c-894d-1025231b76a0": {
+      "type": "product-announcment",
+      "blocks": {
+        "7679e2eb-d064-4419-8f94-f59aa9549f00": {
+          "type": "Annoucment",
+          "settings": {
+            "p-A-one": "actifs naturels et vegan"
+          }
+        },
+        "59a30906-df63-4855-97db-d9409b0a9f60": {
+          "type": "Annoucment",
+          "settings": {
+            "p-A-one": "fabriqué en france"
+          }
+        },
+        "f16285cc-c722-410f-a211-4c9934f697c9": {
+          "type": "Annoucment",
+          "settings": {
+            "p-A-one": "ingrédients clean et transparent"
+          }
+        }
+      },
+      "block_order": [
+        "7679e2eb-d064-4419-8f94-f59aa9549f00",
+        "59a30906-df63-4855-97db-d9409b0a9f60",
+        "f16285cc-c722-410f-a211-4c9934f697c9"
+      ],
+      "settings": {
+      }
+    },
+    "61b431ac-c49e-422c-b5da-a6b0fe21d711": {
+      "type": "choix",
+      "blocks": {
+        "433c7749-6aa3-4e94-99de-75a23f55e19c": {
+          "type": "Slide",
+          "settings": {
+            "image-slide": "shopify:\/\/shop_images\/Rectangle_39-1.png",
+            "heading-text": "Legerate",
+            "paragraph-her": "“Cela fait 1 semaine que je les prend , j'ai commander une cure de 3 mois et je ressent déjà les effets. Je suis plus légère, moins de ballonnements, je me sent bien et en forme. Mon ventre a déjà degonflé.”",
+            "lastheading": "Lea99"
+          }
+        },
+        "a2a6127d-69f5-46ca-be8d-42ca9870ca89": {
+          "type": "Slide",
+          "settings": {
+            "image-slide": "shopify:\/\/shop_images\/Rectangle_39.png",
+            "heading-text": "Curaly sommeil",
+            "paragraph-her": "“J'ai déjà testé une autre marque, mais qui ne m'avait pas convaincu... Avec ces gummies la, je m'endors plus vite et je fais moins de cauchemars. Je les recommande si vous avez des soucis de sommeil!”",
+            "lastheading": "Elise M."
+          }
+        },
+        "60d92c1e-5ff4-433f-ab29-d3407c61014b": {
+          "type": "Slide",
+          "settings": {
+            "image-slide": "shopify:\/\/shop_images\/Rectangle_39-2.png",
+            "heading-text": "Un miracle!",
+            "paragraph-her": "“Super produit, c’est même un miracle. Chute de cheveux estimée à 0% depuis ce traitement. Ravie et je le recommande à tout mon entourage. Dès que j’ai un code promo je prendrais une cure pour ma maman également 🙂”",
+            "lastheading": "Lidia T."
+          }
+        },
+        "fae390fc-2ee9-4f20-9704-55ff706e7603": {
+          "type": "Slide",
+          "settings": {
+            "image-slide": "shopify:\/\/shop_images\/Rectangle_39-1.png",
+            "heading-text": "Legerate",
+            "paragraph-her": "“Cela fait 1 semaine que je les prend , j'ai commander une cure de 3 mois et",
+            "lastheading": "Lea99"
+          }
+        },
+        "slide_nfWmMB": {
+          "type": "Slide",
+          "settings": {
+            "image-slide": "shopify:\/\/shop_images\/Rectangle_39.png",
+            "heading-text": "Curaly sommeil",
+            "paragraph-her": "“J'ai déjà testé une autre marque, mais qui ne m'avait pas convaincu... Avec ces gummies la, je m'endors plus vite et je fais moins de cauchemars. Je les recommande si vous avez des soucis de sommeil!”",
+            "lastheading": "Elise M."
+          }
+        },
+        "slide_VEYT9E": {
+          "type": "Slide",
+          "settings": {
+            "image-slide": "shopify:\/\/shop_images\/Rectangle_39-2.png",
+            "heading-text": "Un miracle!",
+            "paragraph-her": "“Super produit, c’est même un miracle. Chute de cheveux estimée à 0% depuis ce traitement. Ravie et je le recommande à tout mon entourage. Dès que j’ai un code promo je prendrais une cure pour ma maman également 🙂”",
+            "lastheading": "Lidia T."
+          }
+        }
+      },
+      "block_order": [
+        "433c7749-6aa3-4e94-99de-75a23f55e19c",
+        "a2a6127d-69f5-46ca-be8d-42ca9870ca89",
+        "60d92c1e-5ff4-433f-ab29-d3407c61014b",
+        "fae390fc-2ee9-4f20-9704-55ff706e7603",
+        "slide_nfWmMB",
+        "slide_VEYT9E"
+      ],
+      "settings": {
+        "heading-test": "Des milliers de clients satisfaits utilisent les gummies <span>Beauty Boost<\/span> tous les jours",
+        "ancher-textone": "Choix #1 de gummies",
+        "first-link-text": "",
+        "last-link-text": "acheter maintenant",
+        "url-id": ""
+      }
+    },
+    "8eab80e2-d07a-4076-beac-ff6b4037c4ef": {
+      "type": "testimonial-clix-review",
+      "blocks": {
+        "994c6d1c-e585-469f-bb5e-54f60b84101a": {
+          "type": "text",
+          "settings": {
+            "lisetreasdf": "vous désirez mettre un terme à la chute de cheveux"
+          }
+        },
+        "cea43f6d-f2f3-4e8a-8ee1-8139357dc571": {
+          "type": "text",
+          "settings": {
+            "lisetreasdf": "vous désirez mettre un terme à la chute de cheveux"
+          }
+        },
+        "c8efa8da-8294-44e0-98c9-2323b66a8a8a": {
+          "type": "text",
+          "settings": {
+            "lisetreasdf": "vous désirez mettre un terme à la chute de cheveux"
+          }
+        },
+        "dda65ac3-b09f-42b7-a110-cbaf104958e0": {
+          "type": "text",
+          "settings": {
+            "lisetreasdf": "vous désirez mettre un terme à la chute de cheveux"
+          }
+        },
+        "94bcc31c-0e2e-45a8-90bb-a9fd0705c1ae": {
+          "type": "text",
+          "settings": {
+            "lisetreasdf": "vous désirez mettre un terme à la chute de cheveux"
+          }
+        }
+      },
+      "block_order": [
+        "994c6d1c-e585-469f-bb5e-54f60b84101a",
+        "cea43f6d-f2f3-4e8a-8ee1-8139357dc571",
+        "c8efa8da-8294-44e0-98c9-2323b66a8a8a",
+        "dda65ac3-b09f-42b7-a110-cbaf104958e0",
+        "94bcc31c-0e2e-45a8-90bb-a9fd0705c1ae"
+      ],
+      "settings": {
+        "heading-test": "Pourquoi <span>des milliers<\/span> de personnes commencent leur journée avec les <span>Gummies Beauty Boost<\/span>",
+        "imgae-reviwe": "shopify:\/\/shop_images\/Vector.png",
+        "headingreview": "Curaly sommeil",
+        "reviwetestarea": "“Cela fait 1 semaine que je les prend , j'ai commander une cure de 3 mois et je ressent déjà les effets. Je suis plus légère, moins de ballonnements, je me sent bien et en forme. Mon ventre a déjà degonflé.”",
+        "heading-ul": "Les gummies Beauty Boost sont parfaits pour vous si...",
+        "lstaach": "acheter maintenant",
+        "isjfskfj": ""
+      }
+    },
+    "474924f6-89c7-4174-b552-5dd43fb74fc5": {
+      "type": "multi-clix-images",
+      "settings": {
+      }
+    },
+    "d49f1195-101c-44e3-afed-823668cd2eab": {
+      "type": "comparisin-Clix",
+      "blocks": {
+        "95602636-09df-4fec-87dd-8b15f999cf81": {
+          "type": "Before",
+          "settings": {
+            "Image-forpich-before": "shopify:\/\/shop_images\/Rectangle_40-1.png",
+            "hading-text-before": "Problèmes de cheveux, ongles et peau",
+            "top-heading-before": "Avant"
+          }
+        },
+        "849381bd-c95c-4982-9f1e-08186c691abe": {
+          "type": "After",
+          "settings": {
+            "Image-forpich-after": "shopify:\/\/shop_images\/Rectangle_39-3.png",
+            "hading-text": "Problèmes de cheveux, ongles et peau",
+            "top-heading-after": "Après"
+          }
+        },
+        "f8fa9c9c-1e72-4cdb-a031-854e41f34661": {
+          "type": "Before-Li",
+          "settings": {
+            "list": "Perte de cheveux"
+          }
+        },
+        "a082e330-efdd-4f6a-b569-e97d7adb09c5": {
+          "type": "Before-Li",
+          "settings": {
+            "list": "Pousse inexistante"
+          }
+        },
+        "d5496cd0-c1c4-4723-82d4-b26b4ace1c85": {
+          "type": "Before-Li",
+          "settings": {
+            "list": "Cheveux ternes et cassants"
+          }
+        },
+        "0878bced-0d6c-4983-8f25-9fca914ec208": {
+          "type": "Before-Li",
+          "settings": {
+            "list": "Ongles fragiles"
+          }
+        },
+        "c7f545e8-3a48-4cef-8a81-c72d7a264ea4": {
+          "type": "Before-Li",
+          "settings": {
+            "list": "Peau sèche et fragilisée\""
+          }
+        },
+        "939281a5-312a-485e-af16-028e039c127f": {
+          "type": "After-Li",
+          "settings": {
+            "list-p": "Cheveux dense et sans perte"
+          }
+        },
+        "554bf7fc-f450-4b7d-86dd-976da683b729": {
+          "type": "After-Li",
+          "settings": {
+            "list-p": "Pousse accélérée"
+          }
+        },
+        "364eedc6-6ee5-4327-a0de-a47a32fff66f": {
+          "type": "After-Li",
+          "settings": {
+            "list-p": "Cheveux forts et brillants"
+          }
+        },
+        "1195a120-3de5-435a-bf8f-5a3d3606aa6b": {
+          "type": "After-Li",
+          "settings": {
+            "list-p": "Ongles plus sains et forts"
+          }
+        },
+        "bea5534f-6a6b-40df-ad34-68181e72d510": {
+          "type": "After-Li",
+          "settings": {
+            "list-p": "Peau sublimée, sans imperfections \""
+          }
+        }
+      },
+      "block_order": [
+        "95602636-09df-4fec-87dd-8b15f999cf81",
+        "849381bd-c95c-4982-9f1e-08186c691abe",
+        "f8fa9c9c-1e72-4cdb-a031-854e41f34661",
+        "a082e330-efdd-4f6a-b569-e97d7adb09c5",
+        "d5496cd0-c1c4-4723-82d4-b26b4ace1c85",
+        "0878bced-0d6c-4983-8f25-9fca914ec208",
+        "c7f545e8-3a48-4cef-8a81-c72d7a264ea4",
+        "939281a5-312a-485e-af16-028e039c127f",
+        "554bf7fc-f450-4b7d-86dd-976da683b729",
+        "364eedc6-6ee5-4327-a0de-a47a32fff66f",
+        "1195a120-3de5-435a-bf8f-5a3d3606aa6b",
+        "bea5534f-6a6b-40df-ad34-68181e72d510"
+      ],
+      "settings": {
+        "headig-text": "Pas besoin de nous croire sur parole...",
+        "semi-heading": "\"J'utilise le Beauty Boost depuis 4 mois et rien à dire, vraiment des résultats bluffants\" - Julia | Cliente Curaly"
+      }
+    },
+    "scroll_animation_sectoin_qG9im6": {
+      "type": "scroll-animation-sectoin",
+      "settings": {
+      }
+    },
+    "2e0e1eed-90ee-45a5-ba52-2698d59134e8": {
+      "type": "VS-section",
+      "blocks": {
+        "8d5ec035-ac02-415e-a948-d598d8a5d207": {
+          "type": "Before",
+          "settings": {
+            "Image-forpich-before": "shopify:\/\/shop_images\/Rectangle_40.png"
+          }
+        },
+        "99b09284-e421-4a83-af07-dcd1086ab4cf": {
+          "type": "After",
+          "settings": {
+            "Image-forpich-after": "shopify:\/\/shop_images\/Rectangle_48.png"
+          }
+        },
+        "746ea71b-e908-42d0-b9d7-be3d1582be76": {
+          "type": "Before-Li",
+          "settings": {
+            "list": "Plus de nutriments par prise"
+          }
+        },
+        "ee4cc252-3e35-4a7d-a475-b086a5ab414e": {
+          "type": "Before-Li",
+          "settings": {
+            "list": "Des ingrédients 100% vegan et naturels"
+          }
+        },
+        "dfdd165d-50a0-4509-91e8-539c9e436be0": {
+          "type": "Before-Li",
+          "settings": {
+            "list": "Efficacité d'absorption de ±90%"
+          }
+        },
+        "62fcc12a-a9f3-46f8-9bf1-402368267c94": {
+          "type": "Before-Li",
+          "settings": {
+            "list": "Effets des actifs prouvés scientifiquement"
+          }
+        },
+        "e6b2d904-5eef-4b49-a3fa-fd9e441024e6": {
+          "type": "Before-Li",
+          "settings": {
+            "list": "Délicieux et facile à digérer"
+          }
+        },
+        "6709aeae-4f00-4200-8410-5e07b529e06b": {
+          "type": "Before-Li",
+          "settings": {
+            "list": "Garantie satisfait ou rembourser\""
+          }
+        },
+        "446c9cf6-5530-4c19-8bfa-f488313edc82": {
+          "type": "After-Li",
+          "settings": {
+            "list-p": "Moins de nutriments par prise"
+          }
+        },
+        "bc0b68bb-e85f-4d12-a55b-2c80eaeda42d": {
+          "type": "After-Li",
+          "settings": {
+            "list-p": "Des ingrédients synthétiques et non vegan"
+          }
+        },
+        "8c9b08a3-2c99-4344-a092-9f6ddadd44f9": {
+          "type": "After-Li",
+          "settings": {
+            "list-p": "Efficacité d'absorption de 7 à 12%"
+          }
+        },
+        "90c118f9-ee2f-4bb1-bc22-c5787673cc22": {
+          "type": "After-Li",
+          "settings": {
+            "list-p": "Actifs et effets non prouvés"
+          }
+        },
+        "a5bdddc8-0556-49da-98d3-f94a28e7791b": {
+          "type": "After-Li",
+          "settings": {
+            "list-p": "Goût chimique et désagréable"
+          }
+        },
+        "8a71946b-4283-4d1c-9b42-05b7cfe3f008": {
+          "type": "After-Li",
+          "settings": {
+            "list-p": "Aucune garantie satisfaction\""
+          }
+        }
+      },
+      "block_order": [
+        "8d5ec035-ac02-415e-a948-d598d8a5d207",
+        "99b09284-e421-4a83-af07-dcd1086ab4cf",
+        "746ea71b-e908-42d0-b9d7-be3d1582be76",
+        "ee4cc252-3e35-4a7d-a475-b086a5ab414e",
+        "dfdd165d-50a0-4509-91e8-539c9e436be0",
+        "62fcc12a-a9f3-46f8-9bf1-402368267c94",
+        "e6b2d904-5eef-4b49-a3fa-fd9e441024e6",
+        "6709aeae-4f00-4200-8410-5e07b529e06b",
+        "446c9cf6-5530-4c19-8bfa-f488313edc82",
+        "bc0b68bb-e85f-4d12-a55b-2c80eaeda42d",
+        "8c9b08a3-2c99-4344-a092-9f6ddadd44f9",
+        "90c118f9-ee2f-4bb1-bc22-c5787673cc22",
+        "a5bdddc8-0556-49da-98d3-f94a28e7791b",
+        "8a71946b-4283-4d1c-9b42-05b7cfe3f008"
+      ],
+      "settings": {
+        "headig-text": "Pas besoin de nous croire sur parole...",
+        "semi-heading": "\"J'utilise le Beauty Boost depuis 4 mois et rien à dire, vraiment des résultats bluffants\" - Julia | Cliente Curaly"
+      }
+    },
+    "56929527-af63-497b-862a-b914cdd3b16d": {
+      "type": "progress-bar-Clix",
+      "settings": {
+      }
+    },
+    "14df4e6b-40e0-4799-a07c-a071350002c0": {
+      "type": "product-with-image-UP",
+      "settings": {
+        "place-image": "shopify:\/\/shop_images\/Rectangle_46.png",
+        "heading-text": "Pas d'effet, pas de soucis!",
+        "semi-heading": "Satisfait ou remboursé",
+        "li-1": "Achat sans risque",
+        "point-2": "Efficace",
+        "point-3": "Premium",
+        "paragrph": "\"Nous sommes convaincus de la qualité de nos produits. C'est pourquoi, nous vous assurons un achat sans risque, grâce à notre garantie satisfait ou remboursé sous 180 jours. Suivez la procédure en 6 étapes pour être éligible. Cliquez ci-dessous pour en savoir plus sur la garantie de remboursement de 180 jours.",
+        "button-ach": "en savoir plus",
+        "lastlinkid": ""
+      }
+    },
+    "deee25da-14be-4bf8-8ef7-848a008185c1": {
+      "type": "faq",
+      "blocks": {
+        "template--16640060424437__deee25da-14be-4bf8-8ef7-848a008185c1-1669588689479d8f13-0": {
+          "type": "item",
+          "settings": {
+            "title": "1. À partir de quand pourrais-je observer des résultats ?",
+            "content": "<p>Yes, we ship all over the world. Shipping costs will apply, and will be added at checkout. We run discounts and promotions all year, so stay tuned for exclusive deals.<\/p>"
+          }
+        },
+        "template--16640060424437__deee25da-14be-4bf8-8ef7-848a008185c1-1669588689479d8f13-1": {
+          "type": "item",
+          "settings": {
+            "title": "2. Comment prendre les gummies Beauty Boost?",
+            "content": "<p>It depends on where you are. Orders processed here will take 5-7 business days to arrive. Overseas deliveries can take anywhere from 7-16 days. Delivery details will be provided in your confirmation email.<\/p>"
+          }
+        },
+        "template--16640060424437__deee25da-14be-4bf8-8ef7-848a008185c1-1669588689479d8f13-2": {
+          "type": "item",
+          "settings": {
+            "title": "3. Les gummies Beauty Boost font-ils pousser les poils du corps ?",
+            "content": "<p>You can contact us through our contact page! We will be happy to assist you.<\/p>"
+          }
+        },
+        "277e75ff-2442-4775-b97b-92c871fba9bb": {
+          "type": "item",
+          "settings": {
+            "title": "4. À partir de quel âge peut-on consommer les gummies Beauty Boost ?",
+            "content": "<p>Write content to answer to common questions your customers may have about your products, shipping policies..<\/p>"
+          }
+        },
+        "6a7b0bce-89b4-404f-8aba-c135d6fd66c6": {
+          "type": "item",
+          "settings": {
+            "title": "5. Y a t-il des contres indications ?",
+            "content": "<p>Write content to answer to common questions your customers may have about your products, shipping policies..<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--16640060424437__deee25da-14be-4bf8-8ef7-848a008185c1-1669588689479d8f13-0",
+        "template--16640060424437__deee25da-14be-4bf8-8ef7-848a008185c1-1669588689479d8f13-1",
+        "template--16640060424437__deee25da-14be-4bf8-8ef7-848a008185c1-1669588689479d8f13-2",
+        "277e75ff-2442-4775-b97b-92c871fba9bb",
+        "6a7b0bce-89b4-404f-8aba-c135d6fd66c6"
+      ],
+      "settings": {
+        "full_width": true,
+        "subheading": "",
+        "title": "Vous avez des questions ?  Nous avons des réponses !",
+        "content": "",
+        "team_avatar_width": 130,
+        "support_hours": "Vous avez d'autres questions ou vous avez besoin d'aide ?",
+        "answer_time": "",
+        "button_text": "Contactez-nous",
+        "button_url": "",
+        "text_position": "center",
+        "background": "#ffffff",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "button_background": "",
+        "button_text_color": "",
+        "accordion_background": "#ffffff",
+        "accordion_text_color": ""
+      }
+    },
+    "1463f121-1da6-4246-9f2c-eb5f3feeb043": {
+      "type": "product-testimonial",
+      "blocks": {
+        "slide_Hyzghk": {
+          "type": "Slide",
+          "settings": {
+            "image-slide": "shopify:\/\/shop_images\/cur_4.png",
+            "heading-text": "Legerate",
+            "paragraph-her": "“Super produit, c’est même un miracle. Chute de cheveux estimée à 0% depuis ce traitement. Ravie et je le recommande à tout mon entourage. Dès que j’ai un code promo je prendrais une cure pour ma maman également 🙂”",
+            "lastheading": "Lea99",
+            "comment-text": "Slim & Detox gummies",
+            "date-text": "17 oct. 2021"
+          }
+        },
+        "3511646e-8803-4566-b394-575e0fdf72b4": {
+          "type": "Slide",
+          "settings": {
+            "image-slide": "shopify:\/\/shop_images\/cur2_2.png",
+            "heading-text": "Un miracle ce produit",
+            "paragraph-her": "“Super produit, c’est même un miracle. Chute de cheveux estimée à 0% depuis ce traitement. Ravie et je le recommande à tout mon entourage. Dès que j’ai un code promo je prendrais une cure pour ma maman également 🙂”",
+            "lastheading": "Lidia T.",
+            "comment-text": "Beauty Boost gummies",
+            "date-text": "18 sep. 2021"
+          }
+        },
+        "eb10a324-b02d-4baa-af62-664593b355e4": {
+          "type": "Slide",
+          "settings": {
+            "image-slide": "shopify:\/\/shop_images\/cur3_2.png",
+            "heading-text": "Legèrete",
+            "paragraph-her": "“Cela fait 1 semaine que je les prend , j'ai commander une cure de 3 mois et je ressent déjà les effets. Je suis plus legère, moins de ballonnements, je me sent bien et en forme. Mon ventre a déjà degonflé.”",
+            "lastheading": "Lea99",
+            "comment-text": "Slim & Detox gummies",
+            "date-text": "09 mar. 2021"
+          }
+        },
+        "5b906969-bfd8-43cd-9e8d-53f7c7b7415f": {
+          "type": "Slide",
+          "settings": {
+            "image-slide": "shopify:\/\/shop_images\/cur_4.png",
+            "heading-text": "Curaly sommeil",
+            "paragraph-her": "“J'ai déjà testé une autre marque, mais qui ne m'avait pas convaincu... Avec ces gummies la, je m'endors plus vite et je fais moins de cauchemars. Je les recommande si vous avez des soucis de sommeil!”",
+            "lastheading": "Elise M.",
+            "comment-text": "Sleep Well gummies",
+            "date-text": "17 oct. 2021"
+          }
+        }
+      },
+      "block_order": [
+        "slide_Hyzghk",
+        "3511646e-8803-4566-b394-575e0fdf72b4",
+        "eb10a324-b02d-4baa-af62-664593b355e4",
+        "5b906969-bfd8-43cd-9e8d-53f7c7b7415f"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "16694127144d23f731",
+    "50cc236a-54a5-421c-894d-1025231b76a0",
+    "61b431ac-c49e-422c-b5da-a6b0fe21d711",
+    "8eab80e2-d07a-4076-beac-ff6b4037c4ef",
+    "474924f6-89c7-4174-b552-5dd43fb74fc5",
+    "d49f1195-101c-44e3-afed-823668cd2eab",
+    "scroll_animation_sectoin_qG9im6",
+    "2e0e1eed-90ee-45a5-ba52-2698d59134e8",
+    "56929527-af63-497b-862a-b914cdd3b16d",
+    "14df4e6b-40e0-4799-a07c-a071350002c0",
+    "deee25da-14be-4bf8-8ef7-848a008185c1",
+    "1463f121-1da6-4246-9f2c-eb5f3feeb043"
+  ]
+}
